@@ -27,7 +27,7 @@ namespace ShopWeb.Models.Sevices
             smtp.EnableSsl = true;
 
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("JafariAmirhossein15@gmail.com", "cmfklcewzlaredrr");
+            smtp.Credentials = new NetworkCredential("JafariAmirhossein15@gmail.com", "*************");
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
 
             smtp.Send(mail);
