@@ -1,0 +1,19 @@
+﻿@using UserServices.ViewModels
+@model AddfavoriteViewModel
+<head>
+
+</head>
+<body>
+    <form method="post" asp-action="AddFavorite" asp-controller="Account">
+        <h3>علایق خود را انتخاب کنید تا ما بتوانیم در یافتن آنها به شما کمک کنیم</h3>
+        @for (int i = 0; i < Model.CategoriesVm.Count(); i++)
+        {
+            <input asp-for="@Model.CategoriesVm[i].IsSelected" /> @Model.CategoriesVm[i].CategoryName
+
+            <input type="hidden" asp-for="@Model.CategoriesVm[i].CategoryId" />
+        }
+        <br />
+        <input type="hidden" asp-for="UserId" />
+        <input type="submit" value="ثبت علایق" class="btn btn-success" />
+    </form>
+</body>

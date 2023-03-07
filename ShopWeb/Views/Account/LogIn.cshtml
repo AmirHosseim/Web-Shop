@@ -1,0 +1,39 @@
+﻿@using UserServices.ViewModels
+@model SignInViewModel
+
+<head>
+
+</head>
+<body>
+    <div asp-validation-summary="ModelOnly"></div>
+    <form method="post" asp-action="LogIn" asp-controller="Account">
+        <div>
+            <label>ایمیل</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div>
+            <label>رمز عبور</label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <input type="submit" value="ورود" class="btn btn-success" />
+    </form>
+    <div>
+        <h3 class="text text-danger">
+            @ViewBag.ErrorMessage
+        </h3>
+    </div>
+
+    <div>
+        <form method="post" asp-controller="Account" asp-action="ExternalLogIn" asp-route-returnUrl="@Model.returnUrl">
+            @foreach (var provider in Model.ExternalLogins)
+            {
+                <button type="submit" value="@provider.Name"
+                    name="provider">
+                    ورود با حساب @provider.DisplayName
+                </button>
+            }
+        </form>
+    </div>
+</body>

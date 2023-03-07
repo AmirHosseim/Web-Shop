@@ -1,0 +1,18 @@
+﻿@using RoleServices.ViewModels
+@model AddToRoleOrRemoveViewModel
+
+<head></head>
+<body>
+    <div asp-validation-summary="ModelOnly"></div>
+    <form method="post" asp-action="RemoveUserFromRole" asp-controller="ManageUser">
+        @for(int i = 0; i < Model.UserRoles.Count(); i++)
+        {
+            <input asp-for="@Model.UserRoles[i].IsSelected"/>
+            <label>@Model.UserRoles[i].RoleName</label>
+
+            <input type="hidden" asp-for="@Model.UserRoles[i].RoleName" />
+        }
+        <input type="hidden" asp-for="@Model.UserId" value="@Model.UserId" />
+        <input type="submit" value="ثبت" cclass="btn btn-danger" />
+    </form>
+</body>

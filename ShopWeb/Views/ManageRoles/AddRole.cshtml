@@ -1,0 +1,10 @@
+﻿@using RoleServices.ViewModels
+@model AddOrEditRoleViewModel
+<body>
+    <div>
+        <form method="post" asp-action="AddRole" asp-controller="ManageRoles">
+            <input asp-for="@Model.Name" name="name" />
+            <input type="submit" value="ثبت مقام" />
+        </form>
+    </div>
+</body>

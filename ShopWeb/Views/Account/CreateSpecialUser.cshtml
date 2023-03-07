@@ -1,0 +1,24 @@
+﻿@using UserServices.ViewModels
+@model CreatSpecialUserViewModel
+<head>
+
+</head>
+<body>
+    <h3>
+        شما می توانید با ویژه کردن حساب خود به امکانات ویژه سایت دسترسی داشته باشید
+    </h3>
+    <div asp-validation-summary="ModelOnly" class="text text-danger"></div>
+    <form method="post" asp-action="CreateSpecialUser" asp-controller="Account">
+        <h4>لطفا مدت زمان را انتخاب کنید</h4>
+        @foreach (var item in Model.OutTimeDays)
+        {
+            <div>
+                <input type="radio" value="@item.Day" asp-for="@Model.OutTimeDay" />@item.Title
+                <h5>قیمت:@item.Price</h5>
+                <input type="hidden" value="@item.Price" asp-for="@item.Price">
+            </div>
+        }
+        <input type="hidden" value="@Model.UserId" asp-for="UserId"/>
+        <input type="submit" value="خرید حساب ویژه" class="btn btn-success" />
+    </form>
+</body>

@@ -1,0 +1,31 @@
+﻿@using ChannelServices.RecuritmentServices
+@using System.Security.Claims
+@model IEnumerable<RecruitmentInChannelForm>
+<head>
+
+</head>
+<body>
+    @if (Model.Count() == 0)
+    {
+        <div class="alert-danger">
+            <p>هیچ فرم استخدامی ثبت نشده است</p>
+        </div>
+    }
+    else
+    {
+        @foreach (var item in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@item.channel.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@item.Description</h6>
+                    <p class="card-text">تعداد دنبال کننده: @item.channel.followers.Count()</p>
+                    @if (item.channel.CreatorId != User.FindFirstValue(ClaimTypes.NameIdentifier))
+                    {
+                        <a class="btn btn-primary" asp-action="ReplyToRecuritmentForm" asp-controller="Channel" asp-route-formId="@item.Id">ارسال درخواست</a>
+                    }
+                </div>
+            </div>
+        }
+    }
+</body>

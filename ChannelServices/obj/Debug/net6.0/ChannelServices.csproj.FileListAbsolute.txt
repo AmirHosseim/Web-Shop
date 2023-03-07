@@ -1,0 +1,12 @@
+D:\Programing\Projects\ShopWeb\ChannelServices\obj\Debug\net6.0\ChannelServices.csproj.AssemblyReference.cache
+D:\Programing\Projects\ShopWeb\ChannelServices\obj\Debug\net6.0\ChannelServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programing\Projects\ShopWeb\ChannelServices\obj\Debug\net6.0\ChannelServices.AssemblyInfoInputs.cache
+D:\Programing\Projects\ShopWeb\ChannelServices\obj\Debug\net6.0\ChannelServices.AssemblyInfo.cs
+D:\Programing\Projects\ShopWeb\ChannelServices\obj\Debug\net6.0\ChannelServices.csproj.CoreCompileInputs.cache
+D:\Programing\Projects\ShopWeb\ChannelServices\bin\Debug\net6.0\ChannelServices.deps.json
+D:\Programing\Projects\ShopWeb\ChannelServices\bin\Debug\net6.0\ChannelServices.dll
+D:\Programing\Projects\ShopWeb\ChannelServices\bin\Debug\net6.0\ChannelServices.pdb
+D:\Programing\Projects\ShopWeb\ChannelServices\obj\Debug\net6.0\ChannelServices.dll
+D:\Programing\Projects\ShopWeb\ChannelServices\obj\Debug\net6.0\refint\ChannelServices.dll
+D:\Programing\Projects\ShopWeb\ChannelServices\obj\Debug\net6.0\ChannelServices.pdb
+D:\Programing\Projects\ShopWeb\ChannelServices\obj\Debug\net6.0\ref\ChannelServices.dll

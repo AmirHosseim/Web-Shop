@@ -1,0 +1,93 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInMnagaer
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ShopWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ShopWeb.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" dir="rtl">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">خانه</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                @*Account controller nav*@
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                مدیریت حساب
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                @if (SignInMnagaer.IsSignedIn(User))
+                                {
+                                    <li><a class="dropdown-item" asp-controller="Account" asp-action="Index">مدیریت حساب</a></li>
+
+                                    <li><a class="dropdown-item" asp-action="SignOut" asp-controller="Account">خروج از حساب</a></li>
+                                }
+                                else
+                                {
+                                    <li><a class="dropdown-item" asp-action="Register" asp-controller="Account">ثبت نام</a></li>
+                                    <li><a class="dropdown-item" asp-action="LogIn" asp-controller="Account">ورود</a></li>
+                                }
+                            </ul>
+                        </li>
+                    </ul>
+                </div> 
+                @*Product Controller nav*@
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                محصولات 
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" asp-action="Categories" asp-controller="Product">دسته بندی ها</a></li>
+                                <li><a class="dropdown-item" href="/Popular">پرفروش ترین ها</a></li>
+                                <li><a class="dropdown-item" asp-action="Index" asp-controller="Product">محصولات</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                @*Channel Controller nav*@
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                مدریت کانال 
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="MyChannelsList">کانال های من</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3" dir="rtl">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 1401 - ShopWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿@using ChannelServices.ProductServices
+@model IEnumerable<Product>
+
+<head>
+
+</head>
+<body>
+    @if (Model.Count() == 0)
+    {
+        <h3 class="text text-danger">هیچ محصولی یافت نشد</h3>
+    }
+    else
+    {
+        @foreach (var item in Model)
+        {
+            <div class="card">
+                <h5 class="card-header">@item.Category.Name </h5>
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">@item.Description</p>
+                    <p class="text text-success">@item.Price</p>
+                    <a asp-controller="ProductManager" asp-action="EditProduct" asp-route-Id="@item.Id" class="btn btn-warning">ویرایش محصول</a>
+                </div>
+            </div>
+        }
+    }
+    <a class="btn btn-primary" asp-controller="ProductManager" asp-action="AddProduct">اضافه کردن محصول</a>
+</body>

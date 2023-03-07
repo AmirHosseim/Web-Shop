@@ -1,0 +1,46 @@
+﻿@using ChannelServices.ChannelServices
+@using System.Security.Claims
+@model Channel
+<head>
+    <style>
+        #Product-Card {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h2>
+            @Model.Name
+        </h2>
+        <h4>
+            @Model.BioGraphy
+        </h4>
+        <br />
+        <div>
+            <p style="font-size:25px;">@Model.followers.Count()</p>
+            <p style="font-size:20px;">دنبال کننده</p>
+        </div>
+        @if (User.FindFirstValue(ClaimTypes.NameIdentifier) != Model.CreatorId)
+        {
+            @if (Model.followers.Any(f => f.ChannelId == Model.Id && f.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier)))
+            {
+                <a class="btn btn-secondary" asp-action="FollowOrUnfollowChannel" asp-controller="Channel" asp-route-ChannelId="@Model.Id" >لغو دنبال کردن</a>
+            }
+            else
+            {
+                <a class="btn btn-primary" asp-action="FollowOrUnfollowChannel" asp-controller="Channel" asp-route-ChannelId="@Model.Id" >دنبال کردن</a>
+            }
+        }
+    </div>
+    <@foreach(var item in Model.products){
+        <div class="card" style="width: 18rem;" id="Product-Card">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@item.Price</h6>
+                    <p class="card-text">@item.Description</p>
+                    <a asp-action="Details" class="btn btn-info" asp-controller="Product" asp-route-Id="@item.Id" asp-route-Name="@item.Name" class="card-link">مشخصات</a>
+                </div>
+            </div>
+    }
+</body>

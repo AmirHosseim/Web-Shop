@@ -1,0 +1,18 @@
+﻿@using ChannelServices.ViewModels
+@model AddRecuritmentFormViewModel
+<head>
+
+</head>
+<body>
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <form method="post" asp-action="AddRecuritmentFormInChannel" asp-controller="Channel" >
+        <div>
+            <label>توضیحات</label>
+            <input class="form-control" type="text" asp-for="Description" />
+        </div>
+        <input class="form-control" type="hidden" asp-for="ChannelId" />
+        <input class="btn btn-success" value="ثبت فرم" type="submit"/>
+    </form>
+
+</body>

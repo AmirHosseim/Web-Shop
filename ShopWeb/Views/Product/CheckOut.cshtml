@@ -1,0 +1,27 @@
+﻿@using ChannelServices.ViewModels
+@model PaymentViewModel
+<head>
+
+</head>
+<body>
+    <form method="post" asp-action="CheckOut" asp-controller="Product">
+        <input asp-for="OrderId" type="hidden"/>
+        <input asp-for="Value" type="hidden"/>
+        <div>
+            <label>شماره کارت</label>
+            <input asp-for="cardnumber" type="number" class="form-control" />
+            <span asp-validation-for="cardnumber" class="text text-danger"></span>
+        </div>
+        <div>
+            <label>رمز دوم یا رمز پویا</label>
+            <input asp-for="CardPassword" type="number" class="form-control" />
+            <span asp-validation-for="CardPassword" class="text text-danger"></span>
+        </div><div>
+            <label>CVV2</label>
+            <input asp-for="CVV2" type="number" class="form-control" />
+            <span asp-validation-for="CVV2" class="text text-danger"></span>
+        </div>
+
+        <input type="submit" value="پرداخت" class="btn btn-success"/>
+    </form>
+</body>

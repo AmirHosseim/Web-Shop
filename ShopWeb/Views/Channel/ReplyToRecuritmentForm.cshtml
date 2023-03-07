@@ -1,0 +1,23 @@
+﻿@using ChannelServices.ViewModels
+@model ReplyToRecuritmentFormViewModel
+<head>
+
+</head>
+<body>
+    @if (Model.AllowToReply == false)
+    {
+        <div asp-validation-summary="ModelOnly" class="text text-danger"></div>
+    }
+    else
+    {
+        <form method="post" asp-action="ReplyToRecuritmentForm" asp-controller="Channel">
+            <div>
+                <label>توضیحات</label>
+                <input class="form-control" type="text" asp-for="Description" />
+            </div>
+            <input class="form-control" type="hidden" asp-for="RecruitmenFormtId" />
+           @* <input class="form-control" type="hidden" asp-for="Name" />*@
+            <input class="btn btn-success" value="ارسال درخواست" type="submit" />
+        </form>
+    }
+</body>

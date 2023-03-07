@@ -1,0 +1,55 @@
+﻿@using ChannelServices.ViewModels
+@model AddProductImageViewModel
+<head>
+    <style>
+        #ProductImg {
+            width: 200px;
+            height: 200px;
+        }
+
+        #ProductImgDiv {
+            display: inline-block;
+            margin-right: 3rem;
+        }
+    </style>
+</head>
+<body>
+    @if (Model.IsAllow == false)
+    {
+        <h3 class="text text-danger">
+            اکانت ویژه شما غیر فعال است
+        </h3>
+    }
+    else
+    {
+        <h3>اضافه کردن عکس</h3>
+        <form method="post" asp-action="AddProductImage" enctype="multipart/form-data">
+            <input type="file" asp-for="Image" />
+            <input type="hidden" asp-for="ProductId" />
+            <br />
+            <input type="submit" value="ثبت عکس" class="btn btn-success" />
+        </form>
+    }
+
+    @if (Model.AddedImages.Count() == 0)
+    {
+        <h2 class="text text-danger">عکسی ذخیره نکرده اید</h2>
+    }
+    else
+    {
+        <h2>عکس های اضافه شده</h2>
+        @foreach (var item in Model.AddedImages)
+        {
+            <div id="ProductImgDiv">
+                <img id="ProductImg" src="~/ProductsImages/@(@item.FileName)@item.Format" />
+                <br />
+                <form method="post" asp-action="DeleteProductImg">
+                    <input asp-for="@item.ImageId" type="hidden" name="ImgId" />
+                    <input asp-for="@item.ProductId" type="hidden" name="ProductId"/>
+                    <input type="submit" class="btn btn-danger" value="حذف">
+                </form>
+            </div>
+        }
+
+    }
+</body>

@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model List<IdentityUser>
+<head></head>
+<body>
+    <div>
+        @foreach(var item in Model)
+        {
+            <p class="h3">
+                @item.UserName
+            </p>
+            <p class="h4">
+                @item.Email
+            </p>
+            <a class="btn btn-warning" asp-action="AddUserToRole" asp-controller="ManageUser" asp-route-UserId="@item.Id">تغییر مقام</a>
+
+            <a class="btn btn-danger" asp-action="RemoveUserFromRole" asp-controller="ManageUser" asp-route-UserId="@item.Id">حذف مقام</a>
+
+        }
+    </div>
+</body>

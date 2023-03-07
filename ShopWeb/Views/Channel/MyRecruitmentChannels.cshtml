@@ -1,0 +1,23 @@
+﻿@using ChannelServices.RecuritmentServices
+@model List<RecruitmentInChannel>
+<head>
+
+</head>
+<body>
+    <div>
+        @foreach (var item in Model)
+        {
+            <div>
+                <div id="header">
+                    @item.channel.Name
+                </div>
+                <div id="body">
+                    <p id="txt-BioGraphy">
+                        @item.channel.BioGraphy
+                    </p>
+                    <a class="btn btn-success" asp-controller="Channel" asp-action="ChannelManagment" asp-route-ChannelId="@item.channel.Id">مدیریت کانال</a>
+                </div>
+            </div>
+        }
+    </div>
+</body>

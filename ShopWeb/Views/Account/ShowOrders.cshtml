@@ -1,0 +1,58 @@
+﻿@using ChannelServices.ProductServices
+@model List<Order>
+
+<head>
+
+</head>
+<body>
+    <h3>سفارشات شما</h3>
+    <br />
+    <h4>سفارشات پرداخت شده شما</h4>
+    @foreach (var order in Model.Where(o => o.IsFinished))
+    {
+        <div>
+            <div id="div-Header">
+                @order.TotalPrice
+            </div>
+            <h5>محصولات خریداری شده</h5>
+            @foreach (var orderDetails in order.Orderdetails)
+            {
+                <ul>
+                    <li>نام محصول:@orderDetails.product.Name</li>
+                    <li>قیمت واحد:@orderDetails.product.Price</li>
+                    <li>قیمت کل:@orderDetails.Price</li>
+                    <li>تعداد:@orderDetails.QuantityInStock</li>
+                </ul>
+            }
+        </div>
+    }
+    <div>
+        <br />
+
+        @if (Model.Where(o => !o.IsFinished).Count() != 0)
+        {
+            <h5>سبد خرید فعلی</h5>
+            @foreach (var order in Model.Where(o => !o.IsFinished))
+            {
+                <div>
+                    @order.TotalPrice
+                </div>
+                <h5>محصولات سفارش داده شده</h5>
+                @foreach (var orderDetails in order.Orderdetails)
+                {
+                    <ul>
+                        <li>نام محصول:@orderDetails.product.Name</li>
+                        <li>قیمت واحد:@orderDetails.product.Price</li>
+                        <li>قیمت کل:@orderDetails.Price</li>
+                        <li>تعداد:@orderDetails.QuantityInStock</li>
+                    </ul>
+                }
+
+            }
+
+            <a class="btn btn-primary" asp-action="ShowStock" asp-controller="Product">
+                نمایش سبد خرید
+            </a>
+        }
+    </div>
+</body>

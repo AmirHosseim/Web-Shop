@@ -1,0 +1,49 @@
+﻿@using ChannelServices.RecuritmentServices
+@model List<RecruitmentInChannelForm>
+<head>
+
+</head>
+<body>
+    @if (Model.Count() == 0)
+    {
+        <div class="alert-danger">
+            <p>هیچ فرم استخدامی ثبت نشده است</p>
+        </div>
+    }
+    else
+    {
+        <h3>درحال استخدام</h3>
+        @foreach (var item in Model.Where(f=> f.WasHired == false))
+        {
+            @if(Model.Where(f=> f.WasHired == false).Count() == 0)
+            {
+                <h5 class="text text-danger">هیج فرمی یافت نشد</h5>
+            }
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@item.channel.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@item.Description</h6>
+                    <a class="btn btn-primary" asp-action="RecruitmentReplys" asp-controller="Channel" asp-route-FormId="@item.Id">برسی درخواست ها</a>
+                </div>
+            </div>
+        }
+
+        <br />
+
+        <h3>اتمام استخدام</h3>
+        @foreach (var item in Model.Where(f=> f.WasHired == true))
+        {
+            @if(Model.Where(f=> f.WasHired == true).Count() == 0)
+            {
+                <h5 class="text text-danger">هیج فرمی یافت نشد</h5>
+            }
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@item.channel.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@item.Description</h6>
+                    <a class="btn btn-primary" asp-action="RecruitmentReplys" asp-controller="Channel" asp-route-FormId="@item.Id">برسی درخواست ها</a>
+                </div>
+            </div>
+        }
+    }
+</body>

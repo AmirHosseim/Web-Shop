@@ -1,0 +1,12 @@
+D:\Programing\Projects\ShopWeb\RoleServices\bin\Debug\net6.0\RoleServices.deps.json
+D:\Programing\Projects\ShopWeb\RoleServices\bin\Debug\net6.0\RoleServices.dll
+D:\Programing\Projects\ShopWeb\RoleServices\bin\Debug\net6.0\RoleServices.pdb
+D:\Programing\Projects\ShopWeb\RoleServices\obj\Debug\net6.0\RoleServices.csproj.AssemblyReference.cache
+D:\Programing\Projects\ShopWeb\RoleServices\obj\Debug\net6.0\RoleServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programing\Projects\ShopWeb\RoleServices\obj\Debug\net6.0\RoleServices.AssemblyInfoInputs.cache
+D:\Programing\Projects\ShopWeb\RoleServices\obj\Debug\net6.0\RoleServices.AssemblyInfo.cs
+D:\Programing\Projects\ShopWeb\RoleServices\obj\Debug\net6.0\RoleServices.csproj.CoreCompileInputs.cache
+D:\Programing\Projects\ShopWeb\RoleServices\obj\Debug\net6.0\RoleServices.dll
+D:\Programing\Projects\ShopWeb\RoleServices\obj\Debug\net6.0\refint\RoleServices.dll
+D:\Programing\Projects\ShopWeb\RoleServices\obj\Debug\net6.0\RoleServices.pdb
+D:\Programing\Projects\ShopWeb\RoleServices\obj\Debug\net6.0\ref\RoleServices.dll

@@ -1,0 +1,43 @@
+﻿@using ChannelServices.ViewModels
+@model AddOrEditProductViewModel
+<head>
+
+</head>
+<body dir="rtl">
+    <div asp-validation-summary="ModelOnly"></div>
+    @if (Model.AllowToAddOrEditProduct == false)
+    {
+        <div>
+            <h3 class="txt txt-danger">مشکلی رخ داد</h3>
+            <ul>
+                <li>مدت زمان اکانت ویژه شما به پایان رسیده است یا کلا آن را خریداری نکرده اید</li>
+            </ul>
+        </div>
+    }
+    else
+    {
+        <h3 class="text-danger">@ViewBag.ErrorMessage</h3>
+        <form asp-action="AddProductToChannel"  method="post">
+
+            <label>نام محصول</label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <label>توضیحات</label>
+            <input asp-for="Description" class="form-control">
+            <span asp-validation-for="Description" class="text-danger"></span>
+            <label>قیمت</label>
+            <input asp-for="Price" class="form-control">
+            <span asp-validation-for="Price" class="text-danger"></span>
+
+            @foreach (var item in Model.Categories)
+            {
+                <input type="radio" value="@item.Id" name="CategoryId" />
+                @item.Name
+            }
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+            <input type="hidden" asp-for="ChannelId" />
+            <br />
+            <input type="submit" class="btn btn-success" value="اضافه کردن محصول" />
+        </form>
+    }
+</body>

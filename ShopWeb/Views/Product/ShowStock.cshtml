@@ -1,0 +1,51 @@
+﻿@using ChannelServices.ProductServices
+@model Order
+<head>
+
+</head>
+<body>
+    @if (Model.Orderdetails.Count() == 0)
+    {
+        <div class="alert alert-danger d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill" /></svg>
+            <div>
+                سبد خرید شما خالی است
+            </div>
+        </div>
+    }
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">نام محصول</th>
+                <th scope="col">قیمت</th>
+                <th scope="col">تعداد</th>
+                <th scope="col">جمع کل</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Orderdetails)
+            {
+                <tr>
+                    <th scope="row">@item.product.Name</th>
+                    <td colspan="2" class="text text-secondary">@item.product.Price</td>
+                    <td colspan="2" class="text text-secondary">@item.QuantityInStock</td>
+                    <td class="text text-danger">@item.Price</td>
+                    <td>
+                        <a asp-action="RemoveOrderDetail" asp-route-OrderDetailId="@item.Id">حذف کل</a>
+                    </td>
+                    <td class="text text-danger">
+                        <a asp-action="LessProductFromStock" asp-route-OrderDetailId="@item.Id">-</a>
+                    </td>
+                    <td class="text text-danger">
+                        <a asp-action="AddToOrder" asp-route-productId="@item.product.Id">+</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h3 class="text text-danger">
+        @Model.TotalPrice مبلغ قابل پرداخت:
+    </h3>
+    <br />
+    <a class="btn btn-success" asp-action="CheckOut" asp-controller="Product">پرداخت</a>
+</body>

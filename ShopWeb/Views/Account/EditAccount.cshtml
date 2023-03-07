@@ -1,0 +1,21 @@
+﻿@using UserServices.ViewModels
+@model EditUserViewModel
+<head>
+
+</head>
+<body>
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <form method="post" asp-action="EditAccount" asp-controller="Account">
+        <label>نام کاربری</label>
+        <input asp-for="UserName" class="form-control" />
+        <br />
+        <input type="submit" class="btn btn-success" value="ویرایش" />
+    </form>
+
+    <div>
+        آیا به دنبال ویرایش دیگر مشخصات هستید؟
+
+        <a class="btn btn-warning" asp-action="EditPassword" asp-controller="Account">ویرایش رمز عبور</a>
+    </div>
+</body>

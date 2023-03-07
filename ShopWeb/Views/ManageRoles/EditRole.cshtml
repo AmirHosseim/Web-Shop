@@ -1,0 +1,15 @@
+﻿@using RoleServices.ViewModels
+@model AddOrEditRoleViewModel
+
+
+<body>
+    <div asp-validation-summary="ModelOnly"></div>
+    <form method="post" asp-action="EditRole" asp-controller="ManageRoles">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" value="@Model.Name" />
+        <span asp-validation-for="Name"></span>
+        <br />
+        <input type="hidden" asp-for="RoleId" value="@Model.RoleId" />
+        <input type="submit" value="ویرایش" class="btn btn-success"/>
+    </form>
+</body>

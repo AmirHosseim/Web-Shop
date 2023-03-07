@@ -1,0 +1,55 @@
+﻿@using ChannelServices.ChannelServices
+@model List<Channel>
+<head>
+    <style>
+        #header{
+            background-color: cornsilk;
+            border-bottom-color: black;
+        }
+        #txt-BioGraphy{
+            font-size:20px;
+        }
+        #dangerMessage-box{
+            background-color:red;
+            height:3cm;
+            border-radius: 20px;
+        }
+        #dangerMessage-box h3{
+            padding: 1cm;
+        }
+    </style>
+</head>
+<body dir="rtl">
+    @if (Model.Count() > 0)
+    {
+        <div>
+            @foreach (var item in Model)
+            {
+                <div>
+                    <div id="header">
+                        @item.Name;
+                    </div>
+                    <div id="body">
+                        <p id="txt-BioGraphy">
+                            @item.BioGraphy
+                        </p>
+                        <p id="txt-ProductCount">
+                            @item.products.Count() تعداد محصول:
+                        </p>
+                        <a class="btn btn-warning">ویرایش کانال</a>
+                        <a class="btn btn-success" asp-controller="Channel" asp-action="ChannelManagment" asp-route-ChannelId="@item.Id">مدیریت کانال</a>
+                    </div>
+                </div>
+
+            }
+        </div>
+    }
+    else
+    {
+        <div id="dangerMessage-box">
+            <h3>شما هیج کانالی را ثبت نکرده اید</h3>
+        </div>
+    }
+    <br />
+    <a class="btn btn-success" asp-action="AddChannel" asp-controller="Channel">اضافه کردن کانال</a>
+</body>

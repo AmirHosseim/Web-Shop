@@ -1,0 +1,57 @@
+﻿@using ChannelServices.ViewModels
+@model ChannelIncomeViewModel
+<head>
+    <style>
+        #TotalIncom-tbl {
+            width: 100%;
+        }
+
+        #SellsProduct-tbl {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <table id="TotalIncom-tbl">
+        <tr>
+            <td>
+                <h3>
+                    درآمد کانال تا به الان
+                </h3>
+            </td>
+            <td>
+                <h4>@Model.ChannelIncome</h4>
+            </td>
+        </tr>
+    </table>
+    <table id="SellsProduct-tbl">
+        <thead>
+            <tr>
+                <td>نام</td>
+                <td>
+                    تعداد فروش
+                </td>
+                <td>
+                    مقدار فروش
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.SellsProducts.OrderByDescending(o => o.SellValue))
+            {
+                <tr>
+                    <td>
+                        @item.product.Name 
+                    </td>
+                    <td>
+                        @item.SellQuantity
+                    </td>
+                    <td>
+                        @item.SellValue
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</body>

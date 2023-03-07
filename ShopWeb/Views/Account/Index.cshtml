@@ -1,0 +1,30 @@
+﻿@using UserServices.ViewModels
+@model ShowAccountDetailsViewModel
+<head>
+
+</head>
+<body>
+    <div>
+        <label>ایمیل</label>
+        <h3>@Model.User.Email</h3>
+
+        <label>نام کاربری</label>
+        <h4>@Model.User.UserName</h4>
+
+        <a class="btn btn-warning" asp-action="EditAccount" asp-controller="Account">ویرایش حساب</a>
+        <br />
+        @if (Model.Favorites.Count() == 0)
+        {
+            <h3 class="text text-warning">شما هیچ علاقمندی ثبت نکرده اید</h3>
+        }
+        else
+        {
+            <label>علاقه های شما</label>
+            @foreach (var item in Model.Favorites)
+            {
+                <p>@item.Category.Name</p>
+            }
+        }
+        <a class="btn btn-primary" asp-action="AddFavorite" asp-controller="Account">ثبت علاقمندی</a>
+    </div>
+</body>

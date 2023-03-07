@@ -1,0 +1,20 @@
+﻿@using ChannelServices.ViewModels
+@model EditChannelViewModel
+<head>
+
+</head>
+<body>
+    <form method="post" asp-action="EditChannel" asp-controller="Channel">
+            <div>
+                <label>نام</label>
+                <input class="form-control" type="text" asp-for="Name" />
+            </div>
+            <div>
+                <label>بیوگرافی یا توضیحات</label>
+                <input class="form-control" type="text" asp-for="BioGraphy" />
+            </div>
+            <input type="hidden" asp-for="@Model.CreatorId" />
+            <input type="hidden" asp-for="@Model.ChannelId"/>
+            <input type="submit" value="ویرایش کانال" />
+        </form>
+</body>

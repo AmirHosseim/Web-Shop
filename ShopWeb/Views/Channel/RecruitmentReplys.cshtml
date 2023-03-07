@@ -1,0 +1,39 @@
+﻿@using ChannelServices.RecuritmentServices
+@model List<ReplyToRecruitmentForm>
+<head>
+    <style>
+        #ReplyCard {
+            border: 2px black;
+            border-radius: 10px;
+        }
+        form{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <div id="ReplyCard">
+            <h2>@item.Name</h2>
+            <p style="font-size:22px;">@item.Description</p>
+            @if (@item.WasNotAccept == false)
+            {
+                <div>
+                    <form method="post" asp-action="RejectToReply" asp-controller="Channel">
+                        <input type="hidden" value="@item.RecruitmenFormtId" name="formId" />
+                        <input type="hidden" value="@item.UserId" name="UserId" />
+
+                        <input type="submit" class="btn btn-danger" value="رد درخواست" />
+                    </form>
+
+                    <a asp-action="AceptToReply" asp-controller="Channel" asp-route-formId="@item.RecruitmenFormtId" asp-route-UserId="@item.UserId">استخدام</a>
+                </div>
+            }
+            else
+            {
+                <h5 class="text text-danger">این درخواست توسظ کانال رد شد</h5>
+            }
+        </div>
+    }
+</body>

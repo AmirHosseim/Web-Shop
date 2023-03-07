@@ -1,0 +1,20 @@
+﻿@using ChannelServices.ViewModels
+@model AcceptToReplyViewModel
+<head>
+
+</head>
+<body>
+    <form method="post" asp-action="AceptToReply" asp-controller="Channel">
+        <input asp-for="UserId" type="hidden"/>
+        <input asp-for="ChannelId" type="hidden"/>
+        <input type="hidden" asp-for="formId" />
+        <h3>دسترسی هایی که کی خواهید به ادمین کانالتان بدهید را انتخاب کنید</h3>
+        @for(int i = 0; i < Model.AccessSelections.Count(); i++)
+        {
+            <input asp-for="@Model.AccessSelections[i].IsSelect"/> @Model.AccessSelections[i].access.Name
+            <input type="hidden" asp-for="@Model.AccessSelections[i].access.Id" />
+        }
+
+        <input type="submit" value="ثبت" />
+    </form>
+</body>

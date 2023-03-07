@@ -1,0 +1,32 @@
+﻿@using ChannelServices.ViewModels
+@model AddChannelViewModel
+<head>
+
+</head>
+<body>
+    <div asp-validation-summary="ModelOnly"></div>
+    @if (Model.AllowToCreate == false)
+    {
+        <div>
+            <h3 class="txt txt-danger">مشکلی رخ داد</h3>
+            <ul>
+                <li>مدت زمان اکانت ویژه شما به پایان رسیده است یا کلا آن را خریداری نکرده اید</li>
+            </ul>
+        </div>
+    }
+    else
+    {
+        <form method="post" asp-action="AddChannel" asp-controller="Channel">
+            <div>
+                <label>نام</label>
+                <input class="form-control" type="text" asp-for="Name" />
+            </div>
+            <div>
+                <label>بیوگرافی یا توضیحات</label>
+                <input class="form-control" type="text" asp-for="BioGraphy" />
+            </div>
+            <input type="hidden" asp-for="@Model.CreatorId" />
+            <input type="submit" value="ثبت کانال" />
+        </form>
+    }
+</body>

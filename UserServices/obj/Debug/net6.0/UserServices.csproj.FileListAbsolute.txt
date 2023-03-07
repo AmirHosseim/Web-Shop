@@ -1,0 +1,15 @@
+D:\Programing\Projects\ShopWeb\UserServices\bin\Debug\net6.0\UserServices.deps.json
+D:\Programing\Projects\ShopWeb\UserServices\bin\Debug\net6.0\UserServices.dll
+D:\Programing\Projects\ShopWeb\UserServices\bin\Debug\net6.0\UserServices.pdb
+D:\Programing\Projects\ShopWeb\UserServices\bin\Debug\net6.0\ChannelServices.dll
+D:\Programing\Projects\ShopWeb\UserServices\bin\Debug\net6.0\ChannelServices.pdb
+D:\Programing\Projects\ShopWeb\UserServices\obj\Debug\net6.0\UserServices.csproj.AssemblyReference.cache
+D:\Programing\Projects\ShopWeb\UserServices\obj\Debug\net6.0\UserServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programing\Projects\ShopWeb\UserServices\obj\Debug\net6.0\UserServices.AssemblyInfoInputs.cache
+D:\Programing\Projects\ShopWeb\UserServices\obj\Debug\net6.0\UserServices.AssemblyInfo.cs
+D:\Programing\Projects\ShopWeb\UserServices\obj\Debug\net6.0\UserServices.csproj.CoreCompileInputs.cache
+D:\Programing\Projects\ShopWeb\UserServices\obj\Debug\net6.0\UserServices.csproj.CopyComplete
+D:\Programing\Projects\ShopWeb\UserServices\obj\Debug\net6.0\UserServices.dll
+D:\Programing\Projects\ShopWeb\UserServices\obj\Debug\net6.0\refint\UserServices.dll
+D:\Programing\Projects\ShopWeb\UserServices\obj\Debug\net6.0\UserServices.pdb
+D:\Programing\Projects\ShopWeb\UserServices\obj\Debug\net6.0\ref\UserServices.dll

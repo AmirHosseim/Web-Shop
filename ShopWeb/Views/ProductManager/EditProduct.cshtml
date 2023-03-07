@@ -1,0 +1,26 @@
+﻿@using ChannelServices.ViewModels
+@model AddOrEditProductViewModel
+<head>
+
+</head>
+<body>
+    <h3 class="text-danger">@ViewBag.ErrorMessage</h3>
+    <form asp-action="EditProduct" asp-controller="ProductManager" method="post">
+
+        <label>نام محصول</label>
+        <input asp-for="Name" class="form-control">
+        <label>توضیحات</label>
+        <input asp-for="Description" class="form-control">
+        <label>قیمت</label>
+        <input asp-for="Price" class="form-control">
+
+        @foreach (var item in Model.Categories)
+        {
+            <input type="radio" value="@item.Id" name="CategoryId" />
+            @item.Name
+        }
+        <input type="hidden" asp-for="ProductIdForEdit" value="@Model.ProductIdForEdit" />
+        <br />
+        <input type="submit" class="btn btn-success" value="ویرایش" />
+    </form>
+</body>

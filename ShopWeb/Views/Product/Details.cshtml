@@ -1,0 +1,106 @@
+﻿@using ChannelServices.ViewModels
+@model ProductDetailViewModel
+<head>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        #AddRate-Link {
+            font-size: 3rem;
+        }
+
+        #SameProducts-div {
+            border: 2px solid #666666;
+            border-radius: 10px;
+        }
+
+        #Product-Img {
+            width: 100%;
+            height: 50%;
+        }
+
+        #Product-ListImg {
+            width: 250px;
+            height: 250px;
+        }
+
+        table {
+            width: auto;
+        }
+
+        td {
+            font-size: 1.6rem;
+            width: 50%;
+            border-bottom: 1px solid black;
+            padding: 15px;
+        }
+
+        #sameProduct-card{
+            width: 18rem;
+            height: 80%;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <table>
+            <tr>
+                <td colspan="1">نام</td>
+                <td colspan="2">@Model.Product.Name</td>
+            </tr>
+            <tr>
+                <td colspan="1">توضیحات</td>
+                <td colspan="2">@Model.Product.Description</td>
+            </tr>
+            <tr>
+                <td colspan="1">قیمت</td>
+                <td colspan="2">@Model.Product.Price</td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    @Model.Product.Channel.Name
+                </td>
+                <td colspan="2">
+                    <a class="btn btn-info" asp-controller="Channel" asp-action="ChannelDetail" asp-route-Id="@Model.Product.ChannelId">مشاهده کانال</a>
+                </td>
+            </tr>
+        </table>
+        @if (Model.Product.ProductImages.Any())
+        {
+            @foreach (var img in Model.Product.ProductImages)
+            {
+                <img id="Product-ListImg" src="~/ProductsImages/@(img.FileName)@img.Format" />
+            }
+        }
+
+        <form asp-action="AddToOrder" method="post" asp-controller="Product" asp-route-productId="@Model.Product.Id">
+            <input type="submit" value="اضافه کردن به سبد خرید" class="btn btn-primary" />
+        </form>
+    </div>
+    <a asp-action="AddRate" id="AddRate-Link" asp-route-ProductId="@Model.Product.Id">اضافه کردن نظر</a>
+    <br />
+    <br />
+    <h4 class="text text-danger">محصولات مشابه</h4>
+    <div id="SameProducts-div">
+        @foreach (var item in Model.SameProducts)
+        {
+            <div class="card" id="sameProduct-card">
+                <div class="card-body">
+                    <div>
+                        @if (item.ProductImages.Any())
+                        {
+                            <img id="Product-Img" src="~/ProductsImages/@(item.ProductImages[0].FileName)@item.ProductImages[0].Format" />
+                        }
+                    </div>
+                    <h5 class="card-title">@item.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@item.Price</h6>
+                    <p class="card-text">@item.Description</p>
+                    <a asp-action="AddToOrder" class="btn btn-primary" asp-controller="Product" asp-route-productId="@item.Id" class="card-link">افزودن به سبد خرید</a>
+                    <a asp-action="Details" class="btn btn-warning" asp-controller="Product" asp-route-Id="@item.Id" asp-route-Name="@item.Name" class="card-link">مشخصات</a>
+                </div>
+            </div>
+        }
+    </div>
+</body>
