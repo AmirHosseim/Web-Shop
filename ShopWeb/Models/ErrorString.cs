@@ -31,5 +31,26 @@ namespace Shopper.Models
                 Code = nameof(PasswordRequiresUpper),
                 Description = "رمز عبور باید دارای حداقل یک حرف بزرگ باشد"
             };
+
+        public override IdentityError InvalidEmail(string email)
+                    => new IdentityError
+                    {
+                        Code = nameof(InvalidEmail),
+                        Description = "ایمیل معتبر نیست"
+                    };
+
+        public override IdentityError DuplicateUserName(string userName)
+                    => new IdentityError
+                    {
+                        Code = nameof(DuplicateUserName),
+                        Description = "این نام کاربری تکراری است"
+                    };
+
+        public override IdentityError DuplicateEmail(string email)
+                    => new IdentityError
+                    {
+                        Code = nameof(DuplicateEmail),
+                        Description = "این ایمیل از قبل در وب سایت ثبت نام کرده است"
+                    };
     }
 }

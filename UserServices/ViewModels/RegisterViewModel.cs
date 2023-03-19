@@ -19,6 +19,7 @@ namespace UserServices.ViewModels
         public string Password { get; set; }
 
         [Compare("Password", ErrorMessage = "با رمز عبور یکی نیست")]
+        [Required(ErrorMessage = "لطفا رمز عبور را تکرار کنید")]
         public string ConfirmPassword { get; set; }
 
         [Required(ErrorMessage = "لطفا ایمیل را وارد")]
