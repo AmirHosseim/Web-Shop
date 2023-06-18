@@ -34,6 +34,7 @@ namespace ShopWeb.Data
         public DbSet<AccessToEmploy> AccessToEmploys { get; set; }
         public DbSet<ProductImageInfo> ProductsImagesInfo { get; set; }
         public DbSet<SettelmentReceipt> SettelmentReceipts { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         { 
             builder.Entity<Channel>().HasKey(x => x.Id);

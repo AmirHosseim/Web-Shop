@@ -10,6 +10,7 @@
             margin-bottom: 1rem;
             text-decoration: none;
             color: black;
+            padding:1vw;
         }
 
             #categoryName:hover {
@@ -29,30 +30,43 @@
 
         #Card-Body {
             margin-top: 3rem;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
             display: inline-block;
             width: 18rem;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 1vw;
+        }
+
+        #Category-Card{
+            background-color: sandybrown;
+            border-radius: 1vw;
         }
     </style>
 </head>
 <body>
     @foreach (var category in Model.Keys)
     {
-        <a asp-action="CategoryProducts" asp-controller="Product" asp-route-CategoryId="@category.Id" id="categoryName">@category.Name</a>
-        @foreach (var product in category.Products)
-        {
-            <div class="card-body" id="Card-Body">
-                <div>
-                    @if (product.ProductImages.Any())
-                    {
-                        <img id="Product-Img" src="~/ProductsImages/@(product.ProductImages[0].FileName)@product.ProductImages[0].Format" />
-                    }
+        <div id="Category-Card">
+            <a asp-action="CategoryProducts" asp-controller="Product" asp-route-CategoryId="@category.Id" id="categoryName">@category.Name</a>
+            @foreach (var product in category.Products)
+            {
+                <div class="card-body" id="Card-Body">
+                    <div>
+                        @if (product.ProductImages.Any())
+                        {
+                            <img id="Product-Img" src="~/ProductsImages/@(product.ProductImages[0].FileName)@product.ProductImages[0].Format" />
+                        }
+                    </div>
+                    <h5 class="card-title">@product.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@product.Price</h6>
+                    <p class="card-text">@product.Description</p>
+                    <a asp-action="AddToOrder" class="btn btn-primary" asp-controller="Product" asp-route-productId="@product.Id" class="card-link">افزودن به سبد خرید</a>
+                    <a asp-action="Details" class="btn btn-warning" asp-controller="Product" asp-route-Id="@product.Id" asp-route-Name="@product.Name" class="card-link">مشخصات</a>
                 </div>
-                <h5 class="card-title">@product.Name</h5>
-                <h6 class="card-subtitle mb-2 text-muted">@product.Price</h6>
-                <p class="card-text">@product.Description</p>
-                <a asp-action="AddToOrder" class="btn btn-primary" asp-controller="Product" asp-route-productId="@product.Id" class="card-link">افزودن به سبد خرید</a>
-                <a asp-action="Details" class="btn btn-warning" asp-controller="Product" asp-route-Id="@product.Id" asp-route-Name="@product.Name" class="card-link">مشخصات</a>
-            </div>
-        }
+            }
+        </div>
     }
 </body>

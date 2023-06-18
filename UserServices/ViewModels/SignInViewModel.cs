@@ -21,6 +21,8 @@ namespace UserServices.ViewModels
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
+        public bool RemmberMe { get; set; }
+
         public string returnUrl { get; set; }
 
         public IList<AuthenticationScheme> ExternalLogins { get; set; }

@@ -77,19 +77,19 @@ namespace ShopWeb.Controllers
                 OrderDetails = orderDetails,
                 ChannelIncome = orderDetails.Sum(o => o.Price),
                 Orders = orderDetails.Select(o => o.order).ToList(),
-                SettelmentReceipts = orderDetails.Select(o=> o.order.SettelmentReceipt).ToList(),
+                SettelmentReceipts = orderDetails.Select(o => o.order.SettelmentReceipt).ToList(),
             };
 
             List<SellsProduct> sellsProducts = new List<SellsProduct>();
 
-            foreach(var product in _context.Products.Where(p=> p.ChannelId == channel.Id).ToList())
+            foreach (var product in _context.Products.Where(p => p.ChannelId == channel.Id).ToList())
             {
                 sellsProducts.Add(new SellsProduct
                 {
                     product = product,
-                    SellQuantity = orderDetails.Where(o=> o.ProductId == product.Id).Sum(o=> o.QuantityInStock),
-                    SellValue = orderDetails.Where(o=> o.ProductId == product.Id).Sum(o=> o.Price),
-                    order = orderDetails.Where(o=> o.ProductId == product.Id).Select(o=> o.order).ToList(),
+                    SellQuantity = orderDetails.Where(o => o.ProductId == product.Id).Sum(o => o.QuantityInStock),
+                    SellValue = orderDetails.Where(o => o.ProductId == product.Id).Sum(o => o.Price),
+                    order = orderDetails.Where(o => o.ProductId == product.Id).Select(o => o.order).ToList(),
                 });
             }
 
@@ -100,44 +100,39 @@ namespace ShopWeb.Controllers
 
 
         [HttpGet]
+        [Authorize]
         public IActionResult AddChannel()
         {
-            string userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var model = new AddChannelViewModel();
 
-            if (userid != null)
+            if (CheckIsFinishedTimeOutSpecialUserAccount())
             {
-                var model = new AddChannelViewModel();
+                model.AllowToCreate = true;
 
-                if (CheckIsFinishedTimeOutSpecialUserAccount())
-                {
-                    model.CreatorId = userid;
-                    model.AllowToCreate = true;
-
-                    return View(model);
-                }
-                else
-                {
-                    model.AllowToCreate = false;
-
-                    return View(model);
-                }
+                return View(model);
             }
             else
             {
-                return NotFound();
+                model.AllowToCreate = false;
+
+                return View(model);
             }
+
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public IActionResult AddChannel(AddChannelViewModel model)
         {
-            if (model == null)
+            if (ModelState.IsValid == false)
             {
                 ModelState.AddModelError("", "مشکلی رخ داد");
 
                 return View(model);
             }
+
+            string UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             string id = Guid.NewGuid().ToString().Replace(" ", "_").Substring(0, 10);
 
@@ -149,15 +144,71 @@ namespace ShopWeb.Controllers
             var Channel = new Channel()
             {
                 Id = id,
-                CreatorId = model.CreatorId,
+                CreatorId = UserId,
                 BioGraphy = model.BioGraphy,
                 Name = model.Name,
             };
 
             _context.Channels.Add(Channel);
-            _context.SaveChanges();
+
+            if (Path.GetExtension(model.Avatar.FileName) != ".jpg")
+            {
+                ViewData["AvatarFormatError"] = "فرمت باید .jpg باشد";
+                return View(model);
+            }
+
+            try
+            {
+                string FilePath = Path.Combine(Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "ChannelsAvatars",
+                     Channel.Id
+                        + Path.GetExtension(model.Avatar.FileName));
+
+                string Format = Path.GetExtension(model.Avatar.FileName);
+
+                using (var stream = new FileStream(FilePath, FileMode.Create))
+                {
+                    model.Avatar.CopyTo(stream);
+                }
+
+                _context.SaveChanges();
+            }
+            catch
+            {
+                ViewData["ErrorInSaveAvatar"] = "مشکلی در ذخیره عکس پروفایل به وجود آمد";
+                return View(model);
+            }
 
             return RedirectToAction("MyChannelsList");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AddOrChangeChannelAvatar(string ChannelId, IFormFile Avatar)
+        {
+            var Channel = _context.Channels.SingleOrDefault(c =>
+                c.Id == ChannelId);
+
+            if (Channel == null) return NotFound();
+
+            if (Path.GetExtension(Avatar.FileName) == ".jpg")
+            {
+                string FilePath = Path.Combine(Directory.GetCurrentDirectory(),
+                    "wwwroot",
+                    "ChannelsAvatars",
+                     ChannelId
+                        + Path.GetExtension(Avatar.FileName));
+
+                string Format = Path.GetExtension(Avatar.FileName);
+
+                using (var stream = new FileStream(FilePath, FileMode.Create))
+                {
+                    Avatar.CopyTo(stream);
+                }
+            }
+
+            return RedirectToAction("ChannelManagment", new { ChannelId = ChannelId });
         }
 
         [HttpGet]
@@ -167,7 +218,7 @@ namespace ShopWeb.Controllers
 
             if (channel == null) return NotFound();
 
-            var model = new AddOrEditProductViewModel();
+            var model = new AddProductViewModel();
 
             if (CheckIsFinishedTimeOutSpecialUserAccount())
             {
@@ -191,12 +242,12 @@ namespace ShopWeb.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult AddProductToChannel(AddOrEditProductViewModel model)
+        public IActionResult AddProductToChannel(AddProductViewModel model)
         {
-            if (model.Name == null || model.Description == null || model.CategoryId == 0 || model.Price == 0)
+            if (!ModelState.IsValid)
             {
-                ModelState.AddModelError(string.Empty, "مشکلی رخ داد لطفا از پر بودن تمام پارامتر ها مطمئن شوید");
-                model.AllowToAddOrEditProduct = true;
+                model.AllowToAddOrEditProduct = CheckIsFinishedTimeOutSpecialUserAccount();
+                model.Categories = _context.Categories.ToList();
                 return View(model);
             }
 
@@ -226,15 +277,43 @@ namespace ShopWeb.Controllers
             };
 
             _context.Products.Add(product);
+
+            string FileName = product.Id + " " + Id;
+
+            string PictureId = Guid.NewGuid().ToString().Substring(1, 5).Replace(" ", "-");
+
+            var ProductImage = new ProductImageInfo() {
+                FileName = FileName,
+                Format = Path.GetExtension(model.Picture.FileName),
+                ProductId = product.Id,
+                ImageId = PictureId,
+            };
+
+            _context.ProductsImagesInfo.Add(ProductImage);
+
+            string FilePath = Path.Combine(Directory.GetCurrentDirectory(),
+                "wwwroot",
+                "ProductsImages",
+                ProductImage.FileName
+                    + Path.GetExtension(model.Picture.FileName));
+
+            string Format = Path.GetExtension(model.Picture.FileName);
+
+            using (var stream = new FileStream(FilePath, FileMode.Create))
+            {
+                model.Picture.CopyTo(stream);
+            }
+
             _context.SaveChanges();
 
-            return RedirectToAction("ChannelManagment", new { ChannelId = model.ChannelId });
+            return RedirectToAction("ProductManagment", new { ChannelId = model.ChannelId });
         }
 
         [HttpGet]
         public IActionResult AddProductImage(string ProductId)
         {
             var product = _context.Products.Include(c => c.Channel).SingleOrDefault(p => p.Id == ProductId);
+
             if (product == null) return NotFound();
 
             string UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -275,9 +354,9 @@ namespace ShopWeb.Controllers
             }
 
 
-            string Id = Guid.NewGuid().ToString().Replace(" ", "_").Substring(1, 5);
+            string Id = Guid.NewGuid().ToString().Replace(" ", "-").Substring(1, 5);
 
-            while (_context.Products.Any(p => p.Id == Id))
+            while (_context.ProductsImagesInfo.Any(p => p.ImageId == Id))
             {
                 Id = Guid.NewGuid().ToString().Replace(" ", "_").Substring(1, 10);
             }
@@ -290,6 +369,7 @@ namespace ShopWeb.Controllers
             };
 
             _context.ProductsImagesInfo.Add(ImageInfo);
+
 
             string FilePath = Path.Combine(Directory.GetCurrentDirectory(),
                 "wwwroot",

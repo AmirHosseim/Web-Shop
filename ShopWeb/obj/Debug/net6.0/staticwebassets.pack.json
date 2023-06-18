@@ -1,0 +1,637 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ShopWeb.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ShopWeb.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Backgrounds\\5594016.jpg",
+      "PackagePath": "staticwebassets\\Backgrounds\\5594016.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Backgrounds\\796854.jpg",
+      "PackagePath": "staticwebassets\\Backgrounds\\796854.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Backgrounds\\Ecommerce campaign-amico.png",
+      "PackagePath": "staticwebassets\\Backgrounds\\Ecommerce campaign-amico.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Backgrounds\\Ecommerce checkout laptop-cuate.png",
+      "PackagePath": "staticwebassets\\Backgrounds\\Ecommerce checkout laptop-cuate.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Backgrounds\\Onlineshop.jpg",
+      "PackagePath": "staticwebassets\\Backgrounds\\Onlineshop.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Backgrounds\\cU6JWo.jpg",
+      "PackagePath": "staticwebassets\\Backgrounds\\cU6JWo.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Backgrounds\\ranger-4df6c1b6.png",
+      "PackagePath": "staticwebassets\\Backgrounds\\ranger-4df6c1b6.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ChannelsAvatars\\187f3619-a.jpg",
+      "PackagePath": "staticwebassets\\ChannelsAvatars\\187f3619-a.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ChannelsAvatars\\80fe78d0-f.jpg",
+      "PackagePath": "staticwebassets\\ChannelsAvatars\\80fe78d0-f.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\Gifs\\icons8-buy.gif",
+      "PackagePath": "staticwebassets\\Icons\\Gifs\\icons8-buy.gif"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\Gifs\\icons8-edit.gif",
+      "PackagePath": "staticwebassets\\Icons\\Gifs\\icons8-edit.gif"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\UserAvatarIcon.png",
+      "PackagePath": "staticwebassets\\Icons\\UserAvatarIcon.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-account-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-account-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-add-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-add-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-add-bookmark-500(1).png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-add-bookmark-500(1).png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-add-bookmark-500.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-add-bookmark-500.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-add-song-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-add-song-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-address-book-50.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-address-book-50.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-age-50.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-age-50.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-age-80.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-age-80.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-age-timeline-50.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-age-timeline-50.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-box-important-100(1).png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-box-important-100(1).png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-box-important-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-box-important-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-buy-96.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-buy-96.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-chevron-left-90.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-chevron-left-90.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-coin-48.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-coin-48.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-coin-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-coin-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-delete-400.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-delete-400.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-detail-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-detail-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-diversity-96.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-diversity-96.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-dollar-48.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-dollar-48.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-double-right-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-double-right-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-duplicate-contacts-30.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-duplicate-contacts-30.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-duplicate-contacts-50.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-duplicate-contacts-50.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-earbud-headphones-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-earbud-headphones-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-edit-128.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-edit-128.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-edit-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-edit-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-edit-90.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-edit-90.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-email-64 (1).png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-email-64 (1).png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-email-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-email-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-email-sign-50.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-email-sign-50.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-game-controller-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-game-controller-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-home-500.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-home-500.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-home-page-96.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-home-page-96.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-image-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-image-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-left-48.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-left-48.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-like-64 (2).png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-like-64 (2).png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-like-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-like-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-lock-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-lock-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-lock-90.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-lock-90.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-log-in-128.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-log-in-128.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-log-in-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-log-in-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-minus-96.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-minus-96.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-money-160.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-money-160.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-more-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-more-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-music-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-music-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-no-image-48.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-no-image-48.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-password-24.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-password-24.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-password-50.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-password-50.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-plus-96.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-plus-96.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-podcasts-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-podcasts-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-popup-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-popup-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-portable-speaker-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-portable-speaker-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-rhythm-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-rhythm-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-right-48.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-right-48.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-search-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-search-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-search-500.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-search-500.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-search-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-search-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-session-timeout-100(1).png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-session-timeout-100(1).png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-sim-card-50.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-sim-card-50.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-stack-of-money-90.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-stack-of-money-90.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-strategy-news-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-strategy-news-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-swipe-right-60.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-swipe-right-60.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-table-of-content-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-table-of-content-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-teacher-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-teacher-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-text-64(1).png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-text-64(1).png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-text-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-text-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-time-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-time-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-unlock-96(1).png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-unlock-96(1).png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-unlock-96.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-unlock-96.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-user-30.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-user-30.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-user-64.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-user-64.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\icons8-video-100.png",
+      "PackagePath": "staticwebassets\\Icons\\icons8-video-100.png"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductBanners\\1600w-DFLtAjcE7Gc.webp",
+      "PackagePath": "staticwebassets\\ProductBanners\\1600w-DFLtAjcE7Gc.webp"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductBanners\\high-definition-star-field-colorful-night-sky-space-nebula-galaxies-space-astronomy-concept-background_232070-8070.jpg",
+      "PackagePath": "staticwebassets\\ProductBanners\\high-definition-star-field-colorful-night-sky-space-nebula-galaxies-space-astronomy-concept-background_232070-8070.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductBanners\\lipstick-promo-banner_33099-1925.avif",
+      "PackagePath": "staticwebassets\\ProductBanners\\lipstick-promo-banner_33099-1925.avif"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductBanners\\m1_macs_banner.webp",
+      "PackagePath": "staticwebassets\\ProductBanners\\m1_macs_banner.webp"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductBanners\\white-abstract-background-design_361591-1242.jpg",
+      "PackagePath": "staticwebassets\\ProductBanners\\white-abstract-background-design_361591-1242.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductBanners\\xz7tsxrUbTfFnXfiaUbZSL.jpg",
+      "PackagePath": "staticwebassets\\ProductBanners\\xz7tsxrUbTfFnXfiaUbZSL.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductsImages\\05aaf07-ba 1c741.jpg",
+      "PackagePath": "staticwebassets\\ProductsImages\\05aaf07-ba 1c741.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductsImages\\05aaf07-ba 1d58e.jpg",
+      "PackagePath": "staticwebassets\\ProductsImages\\05aaf07-ba 1d58e.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductsImages\\05aaf07-ba 2a5d9.jpg",
+      "PackagePath": "staticwebassets\\ProductsImages\\05aaf07-ba 2a5d9.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductsImages\\66563be-fc a3fdb.jpg",
+      "PackagePath": "staticwebassets\\ProductsImages\\66563be-fc a3fdb.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ShopWeb.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ShopWeb.props",
+      "PackagePath": "build\\ShopWeb.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ShopWeb.props",
+      "PackagePath": "buildMultiTargeting\\ShopWeb.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ShopWeb.props",
+      "PackagePath": "buildTransitive\\ShopWeb.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

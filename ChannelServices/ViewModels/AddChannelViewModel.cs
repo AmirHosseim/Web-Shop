@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,11 +14,12 @@ namespace ChannelServices.ViewModels
         [Required(ErrorMessage ="این فیلد اجباری است")]
         public string Name { get; set; }
 
-        [MaxLength(20, ErrorMessage = "توضیحات کانال نمی تواند بیشتر از 40 کاراکتر باشد")]
+        [MaxLength(200, ErrorMessage = "توضیحات کانال نمی تواند بیشتر از 200 کاراکتر باشد")]
         [Required(ErrorMessage = "این فیلد اجباری است")]
         public string BioGraphy { get; set; }
 
-        public string CreatorId { get; set; }
+        [Required(ErrorMessage ="لطفا عکس پروفایل را وارد کنید")]
+        public IFormFile Avatar { get; set; } 
 
         public bool AllowToCreate { get; set; }
     }

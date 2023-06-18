@@ -1,7 +1,35 @@
 ﻿@using ChannelServices.ViewModels
-@model AddOrEditProductViewModel
+@model AddProductViewModel
 <head>
+    <style>
+        label {
+            margin-bottom: 5px;
+        }
 
+        #Input-group {
+            margin-bottom: 1rem;
+        }
+
+        #formBox {
+            margin-top: 10%;
+            border-radius: 1vw;
+            /*box-shadow: 1px 1px 20px 3px black;*/
+            padding: 1rem;
+            display: inline-block;
+            float: right;
+        }
+
+        #ImageBox{
+            display:inline-block;
+            float: left;
+            
+        }
+
+        #ImageBox img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body dir="rtl">
     <div asp-validation-summary="ModelOnly"></div>
@@ -16,28 +44,51 @@
     }
     else
     {
-        <h3 class="text-danger">@ViewBag.ErrorMessage</h3>
-        <form asp-action="AddProductToChannel"  method="post">
+        <div id="ImageBox" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <img src="~/Backgrounds/Ecommerce campaign-amico.png"  />
+        </div>
+        <div>
+            <div align="center" id="formBox" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <h3 class="text-danger">@ViewBag.ErrorMessage</h3>
+                <form asp-action="AddProductToChannel" enctype="multipart/form-data" method="post">
+                    <div align="right" id="Input-group">
+                        <label>عکس محصول</label>
+                        <input asp-for="Picture" class="form-control">
+                        <span asp-validation-for="Picture" class="text-danger"></span>
+                    </div>
+                    <div align="right" id="Input-group">
+                        <label>نام محصول</label>
+                        <input asp-for="Name" class="form-control">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div align="right" id="Input-group">
+                        <label>توضیحات</label>
+                        <textarea asp-for="Description" class="form-control"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div id="Input-group" align="right">
+                        <label>قیمت</label>
+                        <input asp-for="Price" class="form-control">
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <select class="form-select" aria-label="Default select example" asp-for="CategoryId" value="Category">
+                        <option selected>دسته بندی کالا</option>
+                        @foreach (var item in Model.Categories)
+                        {
+                            <option name="Category" value="@item.Id">@item.Name</option>
 
-            <label>نام محصول</label>
-            <input asp-for="Name" class="form-control">
-            <span asp-validation-for="Name" class="text-danger"></span>
-            <label>توضیحات</label>
-            <input asp-for="Description" class="form-control">
-            <span asp-validation-for="Description" class="text-danger"></span>
-            <label>قیمت</label>
-            <input asp-for="Price" class="form-control">
-            <span asp-validation-for="Price" class="text-danger"></span>
+                        }
+                    </select>
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    <input type="hidden" asp-for="ChannelId" />
+                    <br />
+                    <div align="right">
+                        <input type="submit" class="btn btn-success" value="اضافه کردن محصول" />
+                    </div>
+                </form>
+            </div>
+        </div>
 
-            @foreach (var item in Model.Categories)
-            {
-                <input type="radio" value="@item.Id" name="CategoryId" />
-                @item.Name
-            }
-            <span asp-validation-for="CategoryId" class="text-danger"></span>
-            <input type="hidden" asp-for="ChannelId" />
-            <br />
-            <input type="submit" class="btn btn-success" value="اضافه کردن محصول" />
-        </form>
     }
 </body>

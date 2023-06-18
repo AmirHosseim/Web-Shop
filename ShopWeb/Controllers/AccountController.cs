@@ -71,7 +71,17 @@ namespace ShopWeb.Controllers
 
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "Home");
+                if (model.QuickLogIn)
+                {
+                    bool LogInResult = await QuickLogIn(user.Email, model.Password);
+
+                    if (LogInResult)
+                    {
+                        return Redirect("/");
+                    }
+                }
+
+                return RedirectToAction("LogIn", "Account");
             }
 
             foreach (var error in result.Errors)
@@ -114,7 +124,7 @@ namespace ShopWeb.Controllers
                 return View(model);
             }
 
-            var result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, true, true);
+            var result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, model.RemmberMe, true);
 
             if (result.Succeeded)
             {
@@ -132,6 +142,16 @@ namespace ShopWeb.Controllers
             return View(model);
         }
 
+
+       
+        public async Task<bool> QuickLogIn(string Email, string Password)
+        {
+            var user = await _userManager.FindByEmailAsync(Email);
+
+            var result = await _signInManager.PasswordSignInAsync(user.UserName, Password, true, true);
+
+            return result.Succeeded;
+        }
 
         [HttpPost]
         public IActionResult ExternalLogIn(string provider, string returnUrl = "")

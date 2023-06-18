@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/bAFlKP/VyGxS04/SGg6TkELVST2+ZiZwJJl0IT51NSpZUj4wAm2nlkSSsYhjKwAAZQA3EOWO8hO79SSsHeZgQ==",
+  "dgSpecHash": "cfE0O4UtfNQ2Zqjsxu5UkPcnHttZzDzRce1n6HADm21S85eyDR0dD3dqQZCgjadIJrNB0JR5fvGqD9pJ6+W0SA==",
   "success": true,
   "projectFilePath": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\ShopWeb.csproj",
   "expectedPackageFiles": [
@@ -18,7 +18,7 @@
     "C:\\Users\\Phoenix\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.9\\microsoft.entityframeworkcore.analyzers.6.0.9.nupkg.sha512",
     "C:\\Users\\Phoenix\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.9\\microsoft.entityframeworkcore.design.6.0.9.nupkg.sha512",
     "C:\\Users\\Phoenix\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.9\\microsoft.entityframeworkcore.relational.6.0.9.nupkg.sha512",
-    "C:\\Users\\Phoenix\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.9\\microsoft.entityframeworkcore.sqlserver.6.0.9.nupkg.sha512",
+    "C:\\Users\\Phoenix\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.7\\microsoft.entityframeworkcore.sqlserver.6.0.7.nupkg.sha512",
     "C:\\Users\\Phoenix\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.9\\microsoft.entityframeworkcore.tools.6.0.9.nupkg.sha512",
     "C:\\Users\\Phoenix\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Phoenix\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",

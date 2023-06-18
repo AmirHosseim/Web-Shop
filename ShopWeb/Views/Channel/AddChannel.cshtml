@@ -1,7 +1,11 @@
 ﻿@using ChannelServices.ViewModels
 @model AddChannelViewModel
 <head>
-
+    <style>
+        form{
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <div asp-validation-summary="ModelOnly"></div>
@@ -16,17 +20,32 @@
     }
     else
     {
-        <form method="post" asp-action="AddChannel" asp-controller="Channel">
+        <form method="post" asp-action="AddChannel" asp-controller="Channel" enctype="multipart/form-data"
+                    class="col-xl-4 col-lg-6 col-md-8 col-sm-12">
+            <div asp-validation-summary="ModelOnly">
+                <p class="text-danger"></p>
+            </div>
+            <div>
+                <label>عکس پروفایل(فرمت .jpg)</label>
+                <input asp-for="Avatar" class="form-control" />
+                <span asp-validation-for="Avatar" class="text-danger"></span>
+                <p class="text-danger">
+                    @ViewBag.AvatarFormatError
+                </p>
+                <p class="text-danger">
+                    @ViewBag.ErrorInSaveAvatar
+                </p>
+            </div>
             <div>
                 <label>نام</label>
                 <input class="form-control" type="text" asp-for="Name" />
             </div>
             <div>
                 <label>بیوگرافی یا توضیحات</label>
-                <input class="form-control" type="text" asp-for="BioGraphy" />
+                <textarea class="form-control" type="text" asp-for="BioGraphy" ></textarea>
             </div>
-            <input type="hidden" asp-for="@Model.CreatorId" />
-            <input type="submit" value="ثبت کانال" />
+            <br />
+            <input type="submit" class="btn btn-success" value="ثبت کانال" />
         </form>
     }
 </body>

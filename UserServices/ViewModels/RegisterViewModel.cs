@@ -26,5 +26,7 @@ namespace UserServices.ViewModels
         [Display(Name = "ایمیل")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+
+        public bool QuickLogIn { get; set; }
     }
 }

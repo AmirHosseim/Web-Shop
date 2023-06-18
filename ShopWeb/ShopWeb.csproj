@@ -34,6 +34,8 @@
 
 	<ItemGroup>
 	  <Folder Include="Migrations\" />
+	  <Folder Include="wwwroot\ChannelsAvatars\" />
+	  <Folder Include="wwwroot\ProductBanners\" />
 	  <Folder Include="wwwroot\ProductsImages\" />
 	</ItemGroup>
 	

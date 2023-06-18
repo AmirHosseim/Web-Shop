@@ -1,33 +1,82 @@
 ﻿@using UserServices.ViewModels
 @model RegisterViewModel
 <head>
+    <style>
 
+        body {
+            background-image: url('/Backgrounds/ranger-4df6c1b6.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        label {
+            float: right;
+            margin-bottom: 5px;
+        }
+
+        #input-group {
+            margin-top: 1rem;
+        }
+
+        #form-box {
+            box-shadow: 1px 1px 10px 1px black;
+            background-color: white;
+            display: inline-block;
+            margin-top: 10%;
+            padding: 1rem;
+            border-radius: 1vw;
+            padding: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <div asp-validation-summary="ModelOnly"></div>
-        <form method="post" asp-action="Register" asp-controller="Account">
-            <div>
-                <label>ایمیل</label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div>
-                <label>نام کاربری</label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
-            </div>
-            <div>
-                <label>رمز عبور</label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div>
-                <label> تکرار رمز عبور</label>
-                <input asp-for="ConfirmPassword" type="password" class="form-control" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div>
-            <input type="submit" value="ثبت نام" class="btn btn-success" />
-        </form>
+    <div align="center">
+        <div align="center" id="form-box" class="col-xl-4 col-lg-6 col-md-8 col-sm-12">
+            <div asp-validation-summary="ModelOnly"></div>
+            <form method="post" asp-action="Register" asp-controller="Account">
+                <div id="input-group">
+                    <label>ایمیل</label>
+                    <br />
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div id="input-group">
+                    <label>نام کاربری</label>
+                    <br />
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div id="input-group">
+                    <label>رمز عبور</label>
+                    <br />
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div id="input-group">
+                    <label>تکرار رمز عبور</label>
+                    <br />
+                    <input type="password" asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div id="input-group" class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" asp-for="QuickLogIn" role="switch" id="flexSwitchCheckChecked">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">ورود به محض ثبت نام</label>
+                </div>
+                <div align="right" id="input-group">
+                    <input type="submit" value="ثبت نام" class="btn btn-success" />
+                </div>
+                <br />
+                <div>
+                    <p>
+                        آیا از قبل حسابی دارید؟ <a href="/Account/LogIn">ورود به حساب فعلی</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
     </div>
 </body>

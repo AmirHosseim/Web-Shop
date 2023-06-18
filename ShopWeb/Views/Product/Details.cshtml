@@ -1,7 +1,19 @@
 ﻿@using ChannelServices.ViewModels
 @model ProductDetailViewModel
 <head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
     <style>
+        #PageTitle {
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+            display: inline-block;
+        }
+
+        #ContentBox {
+            margin-top: 2rem;
+        }
+
         a {
             text-decoration: none;
         }
@@ -15,92 +27,265 @@
             border-radius: 10px;
         }
 
-        #Product-Img {
+        #TitleLine {
             width: 100%;
-            height: 50%;
+            border-top: 4px solid blue;
         }
+
+        #ImageSkipBtn {
+            border-radius: 1vw;
+        }
+
+        #Product-Img {
+            border-radius: 1vw;
+        }
+
+            #Product-Img:hover {
+                opacity: 50%;
+            }
 
         #Product-ListImg {
-            width: 250px;
-            height: 250px;
+            display: inline-block;
+            float: right;
+            margin-left: 1vw;
+            margin-bottom: 1rem;
+            background-color: bisque;
+            border-radius: 1vw;
         }
 
-        table {
-            width: auto;
+        #ImgesBox {
+            padding: 1rem;
+        }
+
+        #ChannelLink {
+            float: right;
+            text-decoration: none;
+            color: black;
+        }
+
+        #ChannelAvatar {
+            float: left;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        #ProductDetailBox {
+            display: inline-block;
+            float: left;
+        }
+
+        #Description {
+            font-size: 1.5vw;
         }
 
         td {
-            font-size: 1.6rem;
+            font-size: 1vw;
             width: 50%;
             border-bottom: 1px solid black;
             padding: 15px;
         }
 
-        #sameProduct-card{
+        /*#sameProduct-card {
             width: 18rem;
             height: 80%;
             margin: 15px;
+        }*/
+
+        #SameProduct-Img {
+            width: 100%;
+            height: 50%;
+        }
+
+        #Card-Body {
+            margin-top: 3rem;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            width: 18rem;
+            background-color:white;
+            padding: 1rem;
+            border-radius: 1vw;
+        }
+
+        #SameProduct-Box{
+            float: right;
+            display:inline;
+            margin-top:5rem;
+            margin-bottom: 5rem;
+            padding: 1rem;
+            border-radius: 1vw;
+            box-shadow: 1px 1px 5px khaki;
         }
     </style>
 </head>
 <body>
-    <div align="center">
-        <table>
-            <tr>
-                <td colspan="1">نام</td>
-                <td colspan="2">@Model.Product.Name</td>
-            </tr>
-            <tr>
-                <td colspan="1">توضیحات</td>
-                <td colspan="2">@Model.Product.Description</td>
-            </tr>
-            <tr>
-                <td colspan="1">قیمت</td>
-                <td colspan="2">@Model.Product.Price</td>
-            </tr>
-            <tr>
-                <td colspan="1">
-                    @Model.Product.Channel.Name
-                </td>
-                <td colspan="2">
-                    <a class="btn btn-info" asp-controller="Channel" asp-action="ChannelDetail" asp-route-Id="@Model.Product.ChannelId">مشاهده کانال</a>
-                </td>
-            </tr>
-        </table>
-        @if (Model.Product.ProductImages.Any())
+    <h1 id="PageTitle">سامسونگ s22</h1>
+
+    <div id="TitleLine">
+    </div>
+
+    <div align="center" id="ContentBox">
+        <div id="Product-ListImg" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner" id="ImgesBox">
+                    <div class="carousel-item active">
+                        <img src="/ProductsImages/@(Model.Product.ProductImages[0].FileName)@Model.Product.ProductImages[0].Format"
+                             class="d-block w-100" alt="عکس محصول" id="Product-Img">
+                    </div>
+                    @if (Model.Product.ProductImages.Count() > 1)
+                    {
+                        @foreach (var img in Model.Product.ProductImages)
+                        {
+                            <div class="carousel-item">
+                                <img id="Product-Img" src="/ProductsImages/@(img.FileName)@img.Format" class="d-block w-100" alt="عکس محصول">
+                            </div>
+                        }
+                    }
+                </div>
+                <button class="carousel-control-prev btn-primary" id="ImageSkipBtn" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next btn-primary" id="ImageSkipBtn" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div id="ProductDetailBox" class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <img src="~/Icons/icons8-table-of-content-100.png" width="20px" height="20px" />
+                        نام
+                    </td>
+                    <td>
+                        @Model.Product.Name
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="~/Icons/icons8-stack-of-money-90.png" width="20px" height="20px" />
+                        قیمت
+                    </td>
+                    <td>
+                        @Model.Product.Price
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a asp-action="ChannelDetail" asp-controller="Channel" asp-route-Id="@Model.Product.ChannelId" id="ChannelLink">
+                            @Model.Product.Channel.Name
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-action="ChannelDetail" asp-controller="Channel" asp-route-Id="@Model.Product.ChannelId">
+                            <img src="/ChannelsAvatars/@(Model.Product.ChannelId).jpg" id="ChannelAvatar" />
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <div align="right">
+                <img src="~/Icons/icons8-add-100.png" width="20px" height="20px" />
+                <a href="sdiubfc" id="AddInTableLink">اضافه کردن به سبد خرید</a>
+            </div>
+            <br />
+            <div class="col-12" align="right">
+                <p class="text-black" id="Description">
+                    <img src="~/Icons/icons8-box-important-100.png" width="20px" height="20px" />
+                    @Model.Product.Description
+                </p>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div id="SameProduct-Box" class="col-12">
+        @if (Model.SameProducts.Any())
         {
-            @foreach (var img in Model.Product.ProductImages)
+            <div>
+                <h5>محصولات مشابه</h5>
+            </div>
+            <hr style="color:blue; height:3px"/>
+            @foreach (var product in Model.SameProducts)
             {
-                <img id="Product-ListImg" src="~/ProductsImages/@(img.FileName)@img.Format" />
+                <div class="card-body" id="Card-Body">
+                    <div>
+                        @if (product.ProductImages.Any())
+                        {
+                            <img id="SameProduct-Img" src="~/ProductsImages/@(product.ProductImages[0].FileName)@product.ProductImages[0].Format" />
+                        }
+                    </div>
+                    <h5 class="card-title">@product.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@product.Price</h6>
+                    <p class="card-text">@product.Description</p>
+                    <a asp-action="AddToOrder" class="btn btn-primary" asp-controller="Product" asp-route-productId="@product.Id" class="card-link">افزودن به سبد خرید</a>
+                    <a asp-action="Details" class="btn btn-warning" asp-controller="Product" asp-route-Id="@product.Id" asp-route-Name="@product.Name" class="card-link">مشخصات</a>
+                </div>
             }
         }
+    </div>
+    @*
+    <div align="center">
+    <table>
+    <tr>
+    <td colspan="1">نام</td>
+    <td colspan="2">@Model.Product.Name</td>
+    </tr>
+    <tr>
+    <td colspan="1">توضیحات</td>
+    <td colspan="2">@Model.Product.Description</td>
+    </tr>
+    <tr>
+    <td colspan="1">قیمت</td>
+    <td colspan="2">@Model.Product.Price</td>
+    </tr>
+    <tr>
+    <td colspan="1">
+    @Model.Product.Channel.Name
+    </td>
+    <td colspan="2">
+    <a class="btn btn-info" asp-controller="Channel" asp-action="ChannelDetail" asp-route-Id="@Model.Product.ChannelId">مشاهده کانال</a>
+    </td>
+    </tr>
+    </table>
+    @if (Model.Product.ProductImages.Any())
+    {
+    @foreach (var img in Model.Product.ProductImages)
+    {
+    <img id="Product-ListImg" src="~/ProductsImages/@(img.FileName)@img.Format" />
+    }
+    }
 
-        <form asp-action="AddToOrder" method="post" asp-controller="Product" asp-route-productId="@Model.Product.Id">
-            <input type="submit" value="اضافه کردن به سبد خرید" class="btn btn-primary" />
-        </form>
+    <form asp-action="AddToOrder" method="post" asp-controller="Product" asp-route-productId="@Model.Product.Id">
+    <input type="submit" value="اضافه کردن به سبد خرید" class="btn btn-primary" />
+    </form>
     </div>
     <a asp-action="AddRate" id="AddRate-Link" asp-route-ProductId="@Model.Product.Id">اضافه کردن نظر</a>
     <br />
     <br />
     <h4 class="text text-danger">محصولات مشابه</h4>
     <div id="SameProducts-div">
-        @foreach (var item in Model.SameProducts)
-        {
-            <div class="card" id="sameProduct-card">
-                <div class="card-body">
-                    <div>
-                        @if (item.ProductImages.Any())
-                        {
-                            <img id="Product-Img" src="~/ProductsImages/@(item.ProductImages[0].FileName)@item.ProductImages[0].Format" />
-                        }
-                    </div>
-                    <h5 class="card-title">@item.Name</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">@item.Price</h6>
-                    <p class="card-text">@item.Description</p>
-                    <a asp-action="AddToOrder" class="btn btn-primary" asp-controller="Product" asp-route-productId="@item.Id" class="card-link">افزودن به سبد خرید</a>
-                    <a asp-action="Details" class="btn btn-warning" asp-controller="Product" asp-route-Id="@item.Id" asp-route-Name="@item.Name" class="card-link">مشخصات</a>
-                </div>
-            </div>
-        }
+    @foreach (var item in Model.SameProducts)
+    {
+    <div class="card" id="sameProduct-card">
+    <div class="card-body">
+    <div>
+    @if (item.ProductImages.Any())
+    {
+    <img id="Product-Img" src="~/ProductsImages/@(item.ProductImages[0].FileName)@item.ProductImages[0].Format" />
+    }
     </div>
+    <h5 class="card-title">@item.Name</h5>
+    <h6 class="card-subtitle mb-2 text-muted">@item.Price</h6>
+    <p class="card-text">@item.Description</p>
+    <a asp-action="AddToOrder" class="btn btn-primary" asp-controller="Product" asp-route-productId="@item.Id" class="card-link">افزودن به سبد خرید</a>
+    <a asp-action="Details" class="btn btn-warning" asp-controller="Product" asp-route-Id="@item.Id" asp-route-Name="@item.Name" class="card-link">مشخصات</a>
+    </div>
+    </div>
+    }
+    </div>*@
 </body>

@@ -1,4 +1,5 @@
 ﻿using ChannelServices.CategoriesServices;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ChannelServices.ViewModels
 {
-    public class AddOrEditProductViewModel
+    public class AddProductViewModel
     {
         public string ProductIdForEdit { get; set; }
 
@@ -30,6 +31,8 @@ namespace ChannelServices.ViewModels
         public bool AllowToAddOrEditProduct { get; set; }
 
         public string ChannelId { get; set; }
+
+        public IFormFile Picture { get; set; }
 
         public List<Category> Categories { get; set; }
     }

@@ -1,20 +1,71 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
 <head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <style>
+        #ImageBox {
+            float: left;
+            display: inline-block;
+        }
 
+        #ContentBox {
+            float: right;
+            display: inline-block;
+            margin-top: 3rem;
+        }
+
+        #carouselExample {
+            display: inline-block;
+            float: right;
+            margin-top: 2.5rem;
+            border-radius: 1vw;
+        }
+
+            #carouselExample img {
+                border-radius: 1vw;
+            }
+
+        #SkipBtnLeft:hover{
+            background-color: blue;
+            border-top-left-radius: 1vw;
+            border-bottom-left-radius: 1vw;
+        }
+
+        #SkipBtnRight:hover{
+            background-color: blue;
+            border-top-right-radius: 1vw;
+            border-bottom-right-radius: 1vw;
+        }
+    }
     </style>
 </head>
 <body>
-    <div>
-        <div>
-
+    <div class="col-xl-6 col-sm-12" id="ImageBox">
+        <img src="~/Backgrounds/Ecommerce checkout laptop-cuate.png" height="auto" width="100%" />
+    </div>
+    <div class="col-xl-6 col-sm-12" id="ContentBox">
+        <h3>از اینجا بخری بردی</h3>
+    </div>
+    <div id="carouselExample" class="carousel slide col-xl-6 col-sm-12">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/ProductBanners/xz7tsxrUbTfFnXfiaUbZSL.jpg" class="d-block w-100" alt="بنر محصول">
+            </div>
+            <div class="carousel-item">
+                <img src="~/ProductBanners/m1_macs_banner.webp" class="d-block w-100" alt="بنر محصول">
+            </div>
+            <div class="carousel-item">
+                <img src="~/ProductBanners/1600w-DFLtAjcE7Gc.webp" class="d-block w-100" alt="بنر محصول">
+            </div>
         </div>
+        <button id="SkipBtnLeft" class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button id="SkipBtnRight" class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </body>
