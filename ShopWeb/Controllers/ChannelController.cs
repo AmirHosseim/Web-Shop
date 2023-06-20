@@ -282,7 +282,8 @@ namespace ShopWeb.Controllers
 
             string PictureId = Guid.NewGuid().ToString().Substring(1, 5).Replace(" ", "-");
 
-            var ProductImage = new ProductImageInfo() {
+            var ProductImage = new ProductImageInfo()
+            {
                 FileName = FileName,
                 Format = Path.GetExtension(model.Picture.FileName),
                 ProductId = product.Id,
@@ -463,11 +464,10 @@ namespace ShopWeb.Controllers
                 if (!CheckAccessOrIsOwner("EditProduct", product.ChannelId)) return NotFound();
 
                 model.Id = product.Id;
-                model.ProductName = product.Name;
-                model.ProductDescription = product.Description;
+                model.Name = product.Name;
+                model.Description = product.Description;
                 model.Price = product.Price;
-                model.CategoryId = product.CategoryId;
-                model.channelId = product.ChannelId;
+                model.ChannelId = product.ChannelId;
                 model.AllowToEditProduct = true;
 
 
@@ -484,7 +484,11 @@ namespace ShopWeb.Controllers
         [HttpPost]
         public IActionResult EditProduct(EditProductViewModel model)
         {
-            if (model == null) return NotFound();
+            if (ModelState.IsValid == false)
+            {
+                model.AllowToEditProduct = CheckIsFinishedTimeOutSpecialUserAccount();
+                return View(model);
+            }
 
             var product = _context.Products.SingleOrDefault(p => p.Id == model.Id);
 
@@ -492,14 +496,13 @@ namespace ShopWeb.Controllers
 
             if (!CheckAccessOrIsOwner("EditProduct", product.ChannelId)) return NotFound();
 
-            product.Name = model.ProductName;
-            product.Description = model.ProductDescription;
-            product.CategoryId = model.CategoryId;
+            product.Name = model.Name;
+            product.Description = model.Description;
             product.Price = model.Price;
 
             _context.SaveChanges();
 
-            return RedirectToAction("ChannelManagment", new { ChannelId = model.channelId });
+            return RedirectToAction("ChannelManagment", new { ChannelId = model.ChannelId });
         }
 
         [HttpGet]
@@ -536,7 +539,10 @@ namespace ShopWeb.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditChannel(EditChannelViewModel model)
         {
-            if (model == null) return NotFound();
+            if (ModelState.IsValid)
+            {
+                return View(model);
+            }
 
             string UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 

@@ -4,31 +4,41 @@
 
 </head>
 <body>
-    @if(Model.AllowToEditProduct == false)
+    @if (Model.AllowToEditProduct == false)
     {
         <h3>شما اکانت ویژه فعال ندارید</h3>
     }
     else
     {
-        <form method="post" asp-action="EditProduct" asp-controller="Channel" >
-            
-            <label>نام محصول</label>
-            <input asp-for="ProductName" class="form-control">
-            <span asp-validation-for="ProductName" class="text-danger"></span>
-            <label>توضیحات</label>
-            <input asp-for="ProductDescription" class="form-control">
-            <span asp-validation-for="ProductDescription" class="text-danger"></span>
-            <label>قیمت</label>
-            <input asp-for="Price" class="form-control">
-            <span asp-validation-for="Price" class="text-danger"></span>
-            <span asp-validation-for="CategoryId" class="text-danger"></span>
-            <input type="hidden" asp-for="@Model.Id"/>
-            <input type="hidden" asp-for="channelId" />
-            <br />
-            <input type="hidden" asp-for="CategoryId" />
-            <input type="submit" class="btn btn-success" value="ذخیره تغییرات" />
-
-        </form>
+        <div align="center">
+            <div align="center" id="formBox" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <h3 class="text-danger">@ViewBag.ErrorMessage</h3>
+                <form asp-action="EditProduct" method="post">
+                    <div align="right" id="Input-group">
+                        <label>نام محصول</label>
+                        <input asp-for="Name" class="form-control">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div align="right" id="Input-group">
+                        <label>توضیحات</label>
+                        <textarea asp-for="Description" class="form-control"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div id="Input-group" align="right">
+                        <label>قیمت</label>
+                        <input asp-for="Price" class="form-control">
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <input type="hidden" asp-for="ChannelId" />
+                    <input type="hidden" asp-for="Id" />
+                    <br />
+                    <div align="right">
+                        <input type="submit" class="btn btn-success" value="ذخیره تغییرات" />
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <a class="btn btn-warning" asp-action="AddProductImage" asp-controller="Channel" asp-route-ProductId="@Model.Id">اضافه کردن عکس</a>
     }
