@@ -510,6 +510,8 @@ namespace ShopWeb.Controllers
         {
             if (ChannelId == null) return NotFound();
 
+            var model = new EditChannelViewModel();
+
             if (CheckIsFinishedTimeOutSpecialUserAccount())
             {
                 string UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -518,28 +520,32 @@ namespace ShopWeb.Controllers
 
                 if (channel == null) return NotFound();
 
-                var model = new EditChannelViewModel()
-                {
-                    Name = channel.Name,
-                    BioGraphy = channel.BioGraphy,
-                    CreatorId = UserId,
-                    ChannelId = channel.Id,
-                };
-
-                return View(channel);
+                model.Name = channel.Name;
+                model.BioGraphy = channel.BioGraphy;
+                model.CreatorId = UserId;
+                model.ChannelId = channel.Id;
+                model.AlreadySpecialUserAccount = true;
             }
             else
             {
-                return View();
+                model.AlreadySpecialUserAccount = false;
             }
 
+            return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult EditChannel(EditChannelViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!CheckIsFinishedTimeOutSpecialUserAccount()) return NotFound();
+
+            else
+            {
+                model.AlreadySpecialUserAccount = true;
+            }
+
+            if (!ModelState.IsValid)
             {
                 return View(model);
             }
@@ -666,10 +672,9 @@ namespace ShopWeb.Controllers
         [HttpPost]
         public IActionResult AddRecuritmentFormInChannel(AddRecuritmentFormViewModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
+            if (!CheckIsFinishedTimeOutSpecialUserAccount()) return NotFound();
+
+            if (!ModelState.IsValid) return View(model);
 
             var channel = _context.Channels.SingleOrDefault(c => c.Id == model.ChannelId
                 && c.CreatorId == User.FindFirstValue(ClaimTypes.NameIdentifier));

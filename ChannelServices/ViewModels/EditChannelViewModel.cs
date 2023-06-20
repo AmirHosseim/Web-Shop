@@ -15,5 +15,7 @@ namespace ChannelServices.ViewModels
         public string CreatorId { get; set; }
 
         public string ChannelId { get; set; }
+
+        public bool AlreadySpecialUserAccount { get; set; }
     }
 }

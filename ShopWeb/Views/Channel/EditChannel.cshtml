@@ -4,17 +4,31 @@
 
 </head>
 <body>
-    <form method="post" asp-action="EditChannel" asp-controller="Channel">
-            <div>
-                <label>نام</label>
-                <input class="form-control" type="text" asp-for="Name" />
-            </div>
-            <div>
-                <label>بیوگرافی یا توضیحات</label>
-                <input class="form-control" type="text" asp-for="BioGraphy" />
-            </div>
-            <input type="hidden" asp-for="@Model.CreatorId" />
-            <input type="hidden" asp-for="@Model.ChannelId"/>
-            <input type="submit" value="ویرایش کانال" />
-        </form>
+    @if (Model.AlreadySpecialUserAccount)
+    {
+        <div>
+            <div class="col-xl-4 col-lg-6 col-md-8 col-sm12">
+            <form method="post" asp-action="EditChannel" asp-controller="Channel">
+                <div>
+                    <label>نام</label>
+                    <input class="form-control" type="text" asp-for="Name" />
+                </div>
+                <div>
+                    <label>بیوگرافی یا توضیحات</label>
+                    <input class="form-control" type="text" asp-for="BioGraphy" />
+                </div>
+                <input type="hidden" asp-for="@Model.CreatorId" />
+                <input type="hidden" asp-for="@Model.ChannelId" />
+                <input type="submit" class="btn btn-success" value="ویرایش کانال" />
+            </form>
+        </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            شما اکانت ویژه فعال ندارید
+        </div>
+        <a asp-action="CreateSpecialUser" asp-controller="Account"></a>
+    }
 </body>
