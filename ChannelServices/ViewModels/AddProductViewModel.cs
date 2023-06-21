@@ -11,8 +11,6 @@ namespace ChannelServices.ViewModels
 {
     public class AddProductViewModel
     {
-        public string ProductIdForEdit { get; set; }
-
         [Required(ErrorMessage = "لطفا نام محصول را وارد کنید")]
         [Display(Name = "نام محصول")]
         public string Name { get; set; }
@@ -34,6 +32,6 @@ namespace ChannelServices.ViewModels
 
         public IFormFile Picture { get; set; }
 
-        public List<Category> Categories { get; set; }
+        public List<Category> Categories;
     }
 }

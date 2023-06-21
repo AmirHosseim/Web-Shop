@@ -248,10 +248,11 @@ namespace ShopWeb.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddProductToChannel(AddProductViewModel model)
         {
+            model.Categories = _context.Categories.ToList();
+
             if (!ModelState.IsValid)
             {
                 model.AllowToAddOrEditProduct = CheckIsFinishedTimeOutSpecialUserAccount();
-                model.Categories = _context.Categories.ToList();
                 return View(model);
             }
 
@@ -311,7 +312,7 @@ namespace ShopWeb.Controllers
 
             _context.SaveChanges();
 
-            return RedirectToAction("ProductManagment", new { ChannelId = model.ChannelId });
+            return RedirectToAction("ChannelManagment", "Channel", new { ChannelId = model.ChannelId });
         }
 
         [HttpGet]
