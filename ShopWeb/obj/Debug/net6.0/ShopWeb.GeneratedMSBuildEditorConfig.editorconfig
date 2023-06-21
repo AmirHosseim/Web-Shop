@@ -116,6 +116,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxSZXBseVRvUmVjdXJpdG1lbnRGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Errors/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXE5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Programing/Projects/ShopWeb/ShopWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -146,14 +150,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Programing/Projects/ShopWeb/ShopWeb/Views/ManageUser/RemoveUserFromRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclxSZW1vdmVVc2VyRnJvbVJvbGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Programing/Projects/ShopWeb/ShopWeb/Views/ProductManager/EditProduct.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdE1hbmFnZXJcRWRpdFByb2R1Y3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Programing/Projects/ShopWeb/ShopWeb/Views/ProductManager/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdE1hbmFnZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Programing/Projects/ShopWeb/ShopWeb/Views/Product/AddRate.cshtml]

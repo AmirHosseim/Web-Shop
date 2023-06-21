@@ -1,0 +1,114 @@
+﻿#PageTitle {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    display: inline-block;
+}
+
+#ContentBox {
+    margin-top: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+#AddRate-Link {
+    font-size: 3rem;
+}
+
+#SameProducts-div {
+    border: 2px solid #666666;
+    border-radius: 10px;
+}
+
+#TitleLine {
+    width: 100%;
+    border-top: 4px solid blue;
+}
+
+#ImageSkipBtn {
+    border-radius: 1vw;
+}
+
+#Product-Img {
+    border-radius: 1vw;
+}
+
+    #Product-Img:hover {
+        opacity: 50%;
+    }
+
+#Product-ListImg {
+    display: inline-block;
+    float: right;
+    margin-left: 1vw;
+    margin-bottom: 1rem;
+    background-color: bisque;
+    border-radius: 1vw;
+}
+
+#ImgesBox {
+    padding: 1rem;
+}
+
+#ChannelLink {
+    float: right;
+    text-decoration: none;
+    color: black;
+}
+
+#ChannelAvatar {
+    float: left;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#ProductDetailBox {
+    display: inline-block;
+    float: left;
+}
+
+#Description {
+    font-size: 1.5vw;
+}
+
+td {
+    font-size: 1vw;
+    width: 50%;
+    border-bottom: 1px solid black;
+    padding: 15px;
+}
+
+/*#sameProduct-card {
+            width: 18rem;
+            height: 80%;
+            margin: 15px;
+        }*/
+
+#SameProduct-Img {
+    width: 100%;
+    height: 50%;
+}
+
+#Card-Body {
+    margin-top: 3rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 18rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1vw;
+}
+
+#SameProduct-Box {
+    float: right;
+    display: inline;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 1rem;
+    border-radius: 1vw;
+    box-shadow: 1px 1px 5px khaki;
+}

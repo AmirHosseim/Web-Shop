@@ -187,6 +187,10 @@ namespace ShopWeb.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddOrChangeChannelAvatar(string ChannelId, IFormFile Avatar)
         {
+            if (ChannelId == "" || Avatar == null) 
+                    return RedirectToAction("ChannelManagment", new { ChannelId = ChannelId });
+            
+
             var Channel = _context.Channels.SingleOrDefault(c =>
                 c.Id == ChannelId);
 

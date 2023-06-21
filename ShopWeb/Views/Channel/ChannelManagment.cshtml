@@ -2,44 +2,7 @@
 @using System.Security.Claims
 @model ChannelManagmentViewModel
 <head>
-    <style>
-        #txt-Description {
-            font-size: 23px;
-        }
-
-        #BioGraphy-Box {
-            background-color: gainsboro;
-        }
-
-        #dangerMessage-box h3 {
-            padding: 1cm;
-        }
-
-        #Product-Card {
-            display: inline-block;
-            margin: 1rem;
-        }
-
-        form {
-            display: inline-block;
-        }
-
-        #Product-Img {
-            width: 100%;
-            height: 50%;
-        }
-
-        #Card-Body {
-            margin-top: 3rem;
-            display: inline-block;
-            width: 18rem;
-        }
-        #ChannelAvatar{
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="~/css/ChannelManagmentStyles.css" />
 </head>
 <body>
     @if (Model.AllowToManageChannel == false)
@@ -50,6 +13,12 @@
     else
     {
         <div>
+            <div align="center">
+                <div id="AvatarBox" class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <img src="~/ChannelsAvatars/@(Model.Channel.Id).jpg" id="ChannelAvatar" />
+                </div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">تغییر عکس پروفایل</button>
+            </div>
             <div>
                 <h2>@Model.Channel.Name</h2>
             </div>
@@ -111,24 +80,22 @@
         </div>
     }
 </body>
-<div class="modal fade" id="AvatarChangeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<!--Change Avatar Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title fs-5" id="FormLabel">تغییر عکس پروفایل</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form asp-action="AddOrChangeChannelAvatar" asp-controller="Channel" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="ChannelId" value="@Model.Channel.Id" />
-                    <div>
-                        <label>عکس پروفایل</label>
-                        <input type="file" name="Avatar" class="form-control" />
-                    </div>
+                <form method="post" asp-action="AddOrChangeChannelAvatar" enctype="multipart/form-data">
+                    <input type="hidden" value="@Model.Channel.Id" name="ChannelId" />
+                    <label>عکس پروفایل (.jpg)</label>
+                    <input type="file" name="Avatar" class="form-control" />
                     <br />
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
-                        <input type="submit" value="ذخیره" class="btn btn-success" />
-                    </div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-success" value="ثبت عکس" />
                 </form>
             </div>
         </div>

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ShopWeb.bundle.scp.css"
     },
     {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Backgrounds\\404 error with a landscape-amico.png",
+      "PackagePath": "staticwebassets\\Backgrounds\\404 error with a landscape-amico.png"
+    },
+    {
       "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Backgrounds\\5594016.jpg",
       "PackagePath": "staticwebassets\\Backgrounds\\5594016.jpg"
     },
@@ -39,6 +43,10 @@
     {
       "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ChannelsAvatars\\80fe78d0-f.jpg",
       "PackagePath": "staticwebassets\\ChannelsAvatars\\80fe78d0-f.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ChannelsAvatars\\81261836-8.jpg",
+      "PackagePath": "staticwebassets\\ChannelsAvatars\\81261836-8.jpg"
     },
     {
       "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\Icons\\Gifs\\icons8-buy.gif",
@@ -375,6 +383,34 @@
     {
       "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\ProductsImages\\66563be-fc a3fdb.jpg",
       "PackagePath": "staticwebassets\\ProductsImages\\66563be-fc a3fdb.jpg"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\css\\AddProductImagePageStyles.css",
+      "PackagePath": "staticwebassets\\css\\AddProductImagePageStyles.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\css\\AddProductStyles.css",
+      "PackagePath": "staticwebassets\\css\\AddProductStyles.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\css\\CategoriesStyle.css",
+      "PackagePath": "staticwebassets\\css\\CategoriesStyle.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\css\\CategoryProduct.css",
+      "PackagePath": "staticwebassets\\css\\CategoryProduct.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\css\\ChannelManagmentStyles.css",
+      "PackagePath": "staticwebassets\\css\\ChannelManagmentStyles.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\css\\LogInStyles.css",
+      "PackagePath": "staticwebassets\\css\\LogInStyles.css"
+    },
+    {
+      "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\css\\ProductDetailStyles.css",
+      "PackagePath": "staticwebassets\\css\\ProductDetailStyles.css"
     },
     {
       "Id": "D:\\Programing\\Projects\\ShopWeb\\ShopWeb\\wwwroot\\css\\site.css",

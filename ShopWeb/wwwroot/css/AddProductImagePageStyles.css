@@ -1,0 +1,9 @@
+﻿#ProductImg {
+    width: 200px;
+    height: 200px;
+}
+
+#ProductImgDiv {
+    display: inline-block;
+    margin-right: 3rem;
+}

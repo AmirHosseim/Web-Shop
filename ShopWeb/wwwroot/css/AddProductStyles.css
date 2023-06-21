@@ -1,0 +1,26 @@
+label {
+    margin-bottom: 5px;
+}
+
+#Input-group {
+    margin-bottom: 1rem;
+}
+
+#formBox {
+    margin-top: 10%;
+    border-radius: 1vw;
+    /*box-shadow: 1px 1px 20px 3px black;*/
+    padding: 1rem;
+    display: inline-block;
+    float: right;
+}
+
+#ImageBox {
+    display: inline-block;
+    float: left;
+}
+
+    #ImageBox img {
+        width: 100%;
+        height: auto;
+    }

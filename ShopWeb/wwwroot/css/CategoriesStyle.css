@@ -1,0 +1,41 @@
+﻿#categoryName {
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+    padding: 1vw;
+}
+
+    #categoryName:hover {
+        color: blue;
+    }
+
+#div-Product {
+    display: inline-block;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+}
+
+#Product-Img {
+    width: 100%;
+    height: 50%;
+}
+
+#Card-Body {
+    margin-top: 3rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 18rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1vw;
+}
+
+#Category-Card {
+    background-color: sandybrown;
+    border-radius: 1vw;
+}
