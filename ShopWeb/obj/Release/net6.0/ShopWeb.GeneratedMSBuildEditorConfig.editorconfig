@@ -1,0 +1,205 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ShopWeb
+build_property.RootNamespace = ShopWeb
+build_property.ProjectDir = D:\Programing\Projects\ShopWeb\ShopWeb\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Programing\Projects\ShopWeb\ShopWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Account/AddFavorite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRGYXZvcml0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Account/CreateSpecialUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhdGVTcGVjaWFsVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Account/EditAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0QWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Account/EditPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Account/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dJbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Account/ShowOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaG93T3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/AceptToReply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxBY2VwdFRvUmVwbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/AddChannel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxBZGRDaGFubmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/AddProductImage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxBZGRQcm9kdWN0SW1hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/AddProductToChannel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxBZGRQcm9kdWN0VG9DaGFubmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/AddRecuritmentFormInChannel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxBZGRSZWN1cml0bWVudEZvcm1JbkNoYW5uZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/ChannelDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxDaGFubmVsRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/ChannelManagment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxDaGFubmVsTWFuYWdtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/EditChannel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxFZGl0Q2hhbm5lbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/EditProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxFZGl0UHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/MyChannelIncome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxNeUNoYW5uZWxJbmNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/MyChannelRecuritmentForms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxNeUNoYW5uZWxSZWN1cml0bWVudEZvcm1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/MyChannelsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxNeUNoYW5uZWxzTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/MyRecruitmentChannels.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxNeVJlY3J1aXRtZW50Q2hhbm5lbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/RecruitmentReplys.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxSZWNydWl0bWVudFJlcGx5cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/RecuritmentFormsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxSZWN1cml0bWVudEZvcm1zTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Channel/ReplyToRecuritmentForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxSZXBseVRvUmVjdXJpdG1lbnRGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Errors/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JzXE5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/ManageRoles/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlUm9sZXNcQWRkUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/ManageRoles/EditRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlUm9sZXNcRWRpdFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/ManageRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/ManageUser/AddUserToRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclxBZGRVc2VyVG9Sb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/ManageUser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/ManageUser/RemoveUserFromRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlclxSZW1vdmVVc2VyRnJvbVJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Product/AddRate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRSYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Product/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDYXRlZ29yaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Product/CategoryProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDYXRlZ29yeVByb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Product/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDaGVja091dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Product/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Product/Populer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQb3B1bGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Product/ShowStock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTaG93U3RvY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programing/Projects/ShopWeb/ShopWeb/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-f4xtuqjfmt
